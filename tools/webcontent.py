@@ -39,9 +39,7 @@ class Driver:
         print('gradepage', time.time() - t)
         # 显性等待，(driver, 超时时长， 调用频率， 异常忽略)
         # WebDriverWait(driver, 15, 0.5).until(EC.frame_to_be_available_and_switch_to_it('year1'))
-
         grade_html = self.driver.find_element_by_id('DivCon2').get_attribute('innerHTML')
-
         print('find', time.time() - t)
         # driver.find_element_by_id('year1').click()
         # HTML = driver.find_element_by_id('DivCon2')
@@ -84,6 +82,7 @@ class Driver:
             term.append(lists)
         return term
 
+    @staticmethod
     def get_timetable_result(self, html):
         result = re.compile(r'.*?<tr>(.*?)</tr>.*?', re.S).findall(html)
         # term = re.compile(r'(.*?)学期', re.S).findall(html)[0]+'学期'
@@ -91,6 +90,7 @@ class Driver:
         list = []
         class_list = []
         class_set = []
+        # 这几行是保存信息
         n = [1, 3, 6, 8, 11]
         m = 0
 
@@ -142,6 +142,7 @@ class Driver:
             w = 0
             classes = []
 
+            # 4的位置下方插入 x
             for i in a:
                 if i == '4':
                     class_set[m + 1].insert(q, 'x')
@@ -184,6 +185,6 @@ class Driver:
             search_result.append(m)
             c += 1
         grade_result = search_result
-        print('qwewqe', grade_result)
+        # print('grade', grade_result)
 
         return grade_result

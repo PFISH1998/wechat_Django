@@ -38,8 +38,8 @@ class Search:
                 return
             except TypeError:
                 print('获取成绩失败')
-            except exceptions.WebDriverException:
-                print('selenium error')
+            except exceptions.WebDriverException as e:
+                print('selenium error 1', e)
             finally:
                 print('销毁')
                 d.driver.quit()

@@ -1928,3 +1928,297 @@ Unable to read VR Path Registry from C:\Users\perry\AppData\Local\openvr\openvrp
 [Parent 19384, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 1684, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 1684, Chrome_ChildThread] WARNING: pipe error: 109: file *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1540714772772	geckodriver	INFO	geckodriver 0.21.0
+1540714772786	geckodriver	INFO	Listening on 127.0.0.1:7724
+1540714775833	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.84kfcPT82E1t"
+*** You are running in headless mode.
+1540714781934	Marionette	INFO	Listening on port 7738
+1540714782376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540714782452	Marionette	DEBUG	[4294967297] Frame script loaded
+1540714782469	Marionette	DEBUG	[4294967297] Frame script registered
+1540714782648	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540714782981	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1540714783901	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540714784054	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540714784694	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540714785650	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540714785652	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540714786088	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540714786242	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540714786253	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540714786682	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540714786683	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540714787226	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540714787754	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540714787806	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540714788764	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540714788769	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540714789091	Marionette	DEBUG	[4294967297] Received observer notification outer-window-destroyed for 4294967303
+1540714789267	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540714789485	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540714789577	Marionette	INFO	Stopped listening on port 7738
+[Child 7492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 14084, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15060, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15060, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1540714869834	geckodriver	INFO	geckodriver 0.21.0
+1540714869850	geckodriver	INFO	Listening on 127.0.0.1:7921
+1540714872891	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.p9cNN5DP6k5H"
+*** You are running in headless mode.
+1540714879075	Marionette	INFO	Listening on port 7933
+1540714879489	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540714879577	Marionette	DEBUG	[6442450945] Frame script loaded
+1540714879609	Marionette	DEBUG	[6442450945] Frame script registered
+1540714879762	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1540714879874	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1540714880681	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540714880701	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540714881036	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540714881188	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540714881190	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540714881328	Marionette	INFO	Stopped listening on port 7933
+[Child 15344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/bu[Child 17692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17692, Chrome_ChildThread] WARNING: pipe error: 1[Child 2512, Chrome_Child1540715218257	geckodriver	INFO	geckodriver 0.21.0
+1540715218271	geckodriver	INFO	Listening on 127.0.0.1:8477
+1540715221297	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.vTmViMJHFjwL"
+*** You are running in headless mode.
+1540715226896	Marionette	INFO	Listening on port 8489
+1540715227370	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540715227573	Marionette	DEBUG	[6442450945] Frame script loaded
+1540715227782	Marionette	DEBUG	[6442450945] Frame script registered
+1540715227897	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1540715228081	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1540715228716	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540715228760	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540715229108	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540715229269	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540715229271	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540715229539	Marionette	INFO	Stopped listening on port 8489
+[Child 12884, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12884, Chrome_ChildThread] WARNING[Parent 1588, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 72, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 72, Chrome_ChildThread] WARNING: pipe error: 109: file z:/1540715260472	geckodriver	INFO	geckodriver 0.21.0
+1540715260492	geckodriver	INFO	Listening on 127.0.0.1:8577
+1540715263939	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.QtrDjd16Vik3"
+*** You are running in headless mode.
+1540715269379	Marionette	INFO	Listening on port 8590
+1540715269470	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540715269525	Marionette	DEBUG	[4294967297] Frame script loaded
+1540715269555	Marionette	DEBUG	[4294967297] Frame script registered
+1540715269741	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540715269943	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540715269947	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1540715270132	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for about:neterror?e=dnsNotFound&u=http%3A//jwauth.cidp.edu.cn/Login.aspx&c=UTF-8&f=regular&d=%E6%88%91%E4%BB%AC%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%E8%87%B3%20jwauth.cidp.edu.cn%20%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82
+1540715655625	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1540715655644	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1540715655644	addons.xpi	ERROR	Failed to download system add-on gmp-gmpopenh264: Error: Failed downloading via XHR, status: 0, reason: error (resource://gre/modules/addons/ProductAddonChecker.jsm:314:16) JS Stack trace: fail@ProductAddonChecker.jsm:314:16
+1540715655647	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1540715655647	addons.xpi	ERROR	Failed to download system add-on gmp-widevinecdm: Error: Failed downloading via XHR, status: 0, reason: error (resource://gre/modules/addons/ProductAddonChecker.jsm:314:16) JS Stack trace: fail@ProductAddonChecker.jsm:314:16
+1540715655648	addons.manager	WARN	Failed to update system addons: Error: Rejecting updated system add-on set that either could not be downloaded or contained unusable add-ons. (resource://gre/modules/addons/XPIInstall.jsm:3645:13) JS Stack trace: updateSystemAddons@XPIInstall.jsm:3645:13
+1540717162651	geckodriver	INFO	geckodriver 0.21.0
+1540717162664	geckodriver	INFO	Listening on 127.0.0.1:11544
+1540717165748	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.JKllxKfv7UI3"
+*** You are running in headless mode.
+1540717171997	Marionette	INFO	Listening on port 11556
+1540717172525	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540717172570	Marionette	DEBUG	[6442450945] Frame script loaded
+1540717172578	Marionette	DEBUG	[6442450945] Frame script registered
+1540717172697	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1540717172768	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1540717173225	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540717173238	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540717173587	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540717174019	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540717174021	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540717174473	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717174588	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717174611	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717174980	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717174984	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717175382	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717175739	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717175761	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717176744	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717176747	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717177024	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450951
+1540717177178	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540717177390	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540717177444	Marionette	INFO	Stopped listening on port 11556
+[Parent 13772, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13772, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13772, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13696, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13696, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_chann1540717560010	geckodriver	INFO	geckodriver 0.21.0
+1540717560031	geckodriver	INFO	Listening on 127.0.0.1:12196
+1540717563108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.EhIBdmZ561gt"
+*** You are running in headless mode.
+1540717567612	Marionette	INFO	Listening on port 12210
+1540717568109	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540717568170	Marionette	DEBUG	[4294967297] Frame script loaded
+1540717568173	Marionette	DEBUG	[4294967297] Frame script registered
+1540717568259	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540717568412	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1540717568962	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540717568968	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540717569229	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540717569632	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540717569634	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540717570128	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717570224	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717570246	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717570629	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717570631	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540717571044	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717572299	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717572362	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717573395	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717573396	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540717573542	Marionette	DEBUG	[4294967297] Received observer notification outer-window-destroyed for 4294967303
+1540717573666	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540717573876	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540717573926	Marionette	INFO	Stopped listening on port 12210
+[Child 5708, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5708, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17592, Chrome_ChildThread[Parent 15472, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15388, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15388, Chrome_ChildThread] WARNING: pipe err1540718431281	geckodriver	INFO	geckodriver 0.21.0
+1540718431294	geckodriver	INFO	Listening on 127.0.0.1:13597
+1540718434339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.ANdUBhQQj0GX"
+*** You are running in headless mode.
+1540718439340	Marionette	INFO	Listening on port 13611
+1540718439792	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540718439829	Marionette	DEBUG	[4294967297] Frame script loaded
+1540718439848	Marionette	DEBUG	[4294967297] Frame script registered
+1540718439890	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540718439975	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1540718440499	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540718440517	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540718440780	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540718441156	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540718441157	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540718441477	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540718441625	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540718441637	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540718442002	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540718442004	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540718443109	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540718443414	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540718443444	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540718444498	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540718444499	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540718444657	Marionette	DEBUG	[4294967297] Received observer notification outer-window-destroyed for 4294967303
+1540718444747	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540718444908	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx
+1540718444938	Marionette	INFO	Stopped listening on port 13611
+[Parent 3128, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17640, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17640, Chrome_ChildThread] WARNING: pipe error: 109: file[Child 7584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/s[Parent 3128, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7172, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7172, Chrome_ChildThread] WARNING: pipe 1540719009930	geckodriver	INFO	geckodriver 0.21.0
+1540719009949	geckodriver	INFO	Listening on 127.0.0.1:14551
+1540719012983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.v3pPHWjAodqE"
+*** You are running in headless mode.
+1540719017662	Marionette	INFO	Listening on port 14565
+1540719018071	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540719018151	Marionette	DEBUG	[6442450945] Frame script loaded
+1540719018179	Marionette	DEBUG	[6442450945] Frame script registered
+1540719018233	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1540719018354	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1540719018862	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540719018883	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540719019100	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540719019483	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540719019484	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540719019930	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719020163	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719020186	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719020557	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719020559	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719020906	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719021294	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719021335	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719021445	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719021446	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719021571	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450951
+1540719021687	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Student/CourseTimetable/MyCourseTimeTable.aspx
+1540719022080	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Student/CourseTimetable/MyCourseTimeTable.aspx
+1540719025130	Marionette	INFO	Stopped listening on port 14565
+[Child 6216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6216, Chrome_ChildThread] WARN[Parent 12868, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_1540719148501	geckodriver	INFO	geckodriver 0.21.0
+1540719148521	geckodriver	INFO	Listening on 127.0.0.1:14804
+1540719151757	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.V7Nu2rRHBnjq"
+*** You are running in headless mode.
+1540719156115	Marionette	INFO	Listening on port 14819
+1540719156265	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540719156483	Marionette	DEBUG	[6442450945] Frame script loaded
+1540719156521	Marionette	DEBUG	[6442450945] Frame script registered
+1540719156704	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1540719156821	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1540719157195	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540719157211	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540719157521	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540719158030	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540719158032	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540719158622	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719158810	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719158830	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719159178	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719159180	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx
+1540719159545	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719159995	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719160031	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719160283	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719160284	Marionette	DEBUG	[6442450945] Received DOM event unload for http://jw.cidp.edu.cn/Navigation/Default.htm
+1540719160410	Marionette	DEBUG	[6442450945] Received observer notification outer-window-destroyed for 6442450951
+1540719160515	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://jw.cidp.edu.cn/Student/CourseTimetable/MyCourseTimeTable.aspx
+1540719160982	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://jw.cidp.edu.cn/Student/CourseTimetable/MyCourseTimeTable.aspx
+1540719164041	Marionette	INFO	Stopped listening on port 14819
+[Child 17100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/commo[Parent 9584, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1540805295005	geckodriver	INFO	geckodriver 0.21.0
+1540805295033	geckodriver	INFO	Listening on 127.0.0.1:5816
+1540805298072	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "--disable-gpu" "-foreground" "-no-remote" "-profile" "C:\\Users\\perry\\AppData\\Local\\Temp\\rust_mozprofile.s64r73ff8uLD"
+*** You are running in headless mode.
+1540805302551	Marionette	INFO	Listening on port 5830
+1540805303040	Marionette	WARN	TLS certificate errors will be ignored for this session
+1540805303083	Marionette	DEBUG	[4294967297] Frame script loaded
+1540805303098	Marionette	DEBUG	[4294967297] Frame script registered
+1540805303167	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1540805303270	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1540805303582	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for http://jwauth.cidp.edu.cn/Login.aspx
+1540805303661	Marionette	DEBUG	[4294967297] Received DOM event pageshow for http://jwauth.cidp.edu.cn/Login.aspx
+1540805303887	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for http://jwauth.cidp.edu.cn/Login.aspx
+1540805303967	Marionette	DEBUG	[4294967297] Received DOM event pagehide for http://jwauth.cidp.edu.cn/Login.aspx
+1540805303970	Marionette	DEBUG	[4294967297] Received DOM event unload for http://jwauth.cidp.edu.cn/Login.aspx
+1540805304108	Marionette	INFO	Stopped listening on port 5830
+1540805304136	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: TypeError: setting getter-only property "_currentSearchHostname" (resource://activity-stream/lib/TopSitesFeed.jsm:86:5) JS Stack trace: uninit@TopSitesFeed.jsm:86:5
+onAction@TopSitesFeed.jsm:707:9
+_middleware/</<@Store.jsm:51:11
+Store/this[method]@Store.jsm:29:55
+uninit@Store.jsm:170:7
+uninit@ActivityStream.jsm:363:5
+uninit@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@bootstrap.js:86:5
+shutdown@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@bootstrap.js:194:3
+callBootstrapMethod@XPIProvider.jsm:1592:20
+_shutdown@XPIProvider.jsm:1728:12
+observe@AsyncShutdown.jsm:541:9
+GeckoDriver.prototype.quit@driver.js:3319:3
+despatch@server.js:297:20
+execute@server.js:271:11
+onPacket/<@server.js:246:15
+onPacket@server.js:245:8
+_onJSONObjectReady/<@transport.js:500:9
+[Child 7000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7000, Chrome_ChildThread] JavaScript error: resource://gre/modules/Sqlite.jsm, line 841: Error: Connection is not open.

@@ -37,6 +37,12 @@ def open_page(sid, pwd):
     s = requests.Session()
     t = s.get(login_url.format(sid, pwd))
     t.encoding = 'utf-8'
+    msg = json.loads(t.text[1:-1])['Message']
+    print(msg)
+    if msg == '密码不正确':
+        raise Exception('PasswordError')
+    if msg == '用户名不存在，请您确认登录身份；如果您还不是教务网站用户，请联系教学科。':
+        raise Exception('IdError')
     s.get(jw_index_url)
     s.get(my_jw_url)
     return s

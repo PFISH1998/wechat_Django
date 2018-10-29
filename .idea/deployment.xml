@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="140.143.17.162">
+  <component name="PublishConfigData" serverName="ubuntu">
     <serverData>
-      <paths name="140.143.17.162">
+      <paths name="ubuntu">
         <serverdata>
           <mappings>
             <mapping deploy="/var/django/wechat" local="$PROJECT_DIR$" web="/" />

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="e11c1fee-b8ba-4cf1-b613-3b81495e200a" name="140.143.17.162" url="http://140.143.17.162">
+      <webServer id="247daf4d-76c7-42a2-9c06-e998126eb9fc" name="ubuntu" url="http://140.143.17.162">
         <fileTransfer host="140.143.17.162" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />

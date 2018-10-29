@@ -10,6 +10,7 @@ g = GetNews()
 def content(request):
     print(request.GET['content'])
     url = request.GET['content']
+    print(url)
     news_content = g.get_page_content(url)
 
     return HttpResponse(json.dumps({
