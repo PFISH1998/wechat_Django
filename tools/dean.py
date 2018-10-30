@@ -1,4 +1,6 @@
 import json
+import random
+
 import requests
 import time
 import html
@@ -32,17 +34,13 @@ def time_test(fun):
     fun(165041131, 19981202)
     print(time.time() - t)
 
-
 def open_page(sid, pwd):
     s = requests.Session()
     t = s.get(login_url.format(sid, pwd))
     t.encoding = 'utf-8'
     msg = json.loads(t.text[1:-1])['Message']
-    print(msg)
     if msg == '密码不正确':
         raise Exception('PasswordError')
-    if msg == '用户名不存在，请您确认登录身份；如果您还不是教务网站用户，请联系教学科。':
-        raise Exception('IdError')
     s.get(jw_index_url)
     s.get(my_jw_url)
     return s
@@ -56,9 +54,8 @@ def get_grade_result(sid, pwd):
     semester_year = data.xpath('//input[@id="hfSemesterFramework"]/@value')[0]
     grade_info = data.xpath('//input[@id="hfAverageMarkFromClass"]/@value')[0]
     # print(json.loads(str(grade_info)))
-    print(json.loads(grade_info))
-    print(json.loads(semester_year))
-
+    # print(json.loads(grade_info))
+    # print(json.loads(semester_year))
     return json.loads(grade_info), json.loads(semester_year)
 
 
@@ -69,13 +66,12 @@ def get_time_table_result(sid, pwd):
     x = s.post(table_url, data=time_table_data)
     data = json.loads(x.text)
     x.encoding = 'ISO-8859-1'
-    print(data)
+    return data
 
 
 def grade_process(grade, term):
     for year in term:
         # print(year)
-
         for i in year['List']:
             # print(i['SemesterId'])
             grade_list = []
@@ -86,3 +82,76 @@ def grade_process(grade, term):
                     grade_list.append(g)
             i.update({'grade_list': grade_list})
     return term
+
+
+def sort_list(week_day):
+    for i in week_day:
+        if i['TimeSlotEnd'] - i['TimeSlotStart'] == 22:
+            time_spend = 200
+        elif i['TimeSlotEnd'] - i['TimeSlotStart'] == 48:
+            time_spend = 400
+        else:
+            time_spend = 200
+        i.update({'time_spend': time_spend})
+
+        if i['TimeSlotStart'] == 96:
+            course_index = 0
+        elif i['TimeSlotStart'] == 122:
+            course_index = 1
+        elif i['TimeSlotStart'] == 168:
+            course_index = 2
+        elif i['TimeSlotStart'] == 194:
+            course_index = 3
+        elif i['TimeSlotStart'] == 228:
+            course_index = 4
+        else:
+            course_index = 0
+        i.update({'course_index': course_index})
+        i.update({'color': random.randint(0, 12)})
+
+        del i['DCId'], i['DCPId'], i['TimeSlotStart'], i['TimeSlotEnd'], i['DCSN']
+        del i['WeekInterval'], i['WeekStart'], i['WeekEnd'], i['Count'], i['Capacity']
+        del i['LUCode'], i['ClassCodes'], i['TeacherRollNumber']
+
+    other_list = []
+    for index in range(6):
+        same_list = []
+        for item in week_day:
+            if item['course_index'] == index:
+                # print(len(same_list))
+                same_list.append(item)
+            if len(same_list) > 1:
+                same_list[0].update({'FullName2': same_list[1]['FullName']})
+                same_list[0].update({'LUName2': same_list[1]['LUName']})
+                same_list[0].update({'Building2': same_list[1]['Building']})
+                same_list[0].update({'Classroom2': same_list[1]['Classroom']})
+                same_list[0].update({'DelymethodName2': same_list[1]['DelymethodName']})
+                same_list[0].update({'Remark2': same_list[1]['Remark']})
+        if same_list:
+            other_list.append(same_list[0])
+
+    new_list = sorted(other_list, key=lambda e: e.__getitem__('course_index'))
+    # print(i for i in new_list)
+    return new_list
+
+
+def time_table_process(data):
+    data_list = []
+    week = ['OnMonday', 'OnTuesday', 'OnWednesday', 'OnThursday', 'OnFriday', 'OnSaturday', 'OnSunday']
+    # print(course)
+    # 循环一周
+    # 判断是否为当天，是的话加入一天的序列
+    for t in week:
+        # print(t)
+        week_day = []
+        for course in data['Data']:
+            # print(course)
+            if course[t]:
+                # print(course)
+                # print('---------------')
+                week_day.append(course)
+        for c in data['Data']:
+            del c[t]
+        data_list.append(sort_list(week_day))
+    print(data_list)
+    return data_list
