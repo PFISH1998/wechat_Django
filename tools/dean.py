@@ -30,8 +30,6 @@ time_table_data = {
 
 def time_test(fun):
     t = time.time()
-    # fun(165042204, 19971216)
-    fun(165041131, 19981202)
     print(time.time() - t)
 
 def open_page(sid, pwd):
@@ -153,5 +151,5 @@ def time_table_process(data):
         for c in data['Data']:
             del c[t]
         data_list.append(sort_list(week_day))
-    print(data_list)
+    # print(data_list)
     return data_list
