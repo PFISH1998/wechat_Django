@@ -32,6 +32,7 @@ def time_test(fun):
     t = time.time()
     print(time.time() - t)
 
+
 def open_page(sid, pwd):
     s = requests.Session()
     t = s.get(login_url.format(sid, pwd))
