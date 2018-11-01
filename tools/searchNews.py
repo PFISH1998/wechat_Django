@@ -153,9 +153,9 @@ class GetNews:
             # 段落文字
             page_content = str.join(p.stripped_strings)
             page_list.append({'content': page_content})
-        page_content = page_list[:-6]
+        page_content = page_list[:-5]
         news_list.append({'title': title, 'pub_time': pub_time, 'url': url,
-                          'page_content': page_content, 'pic_list': pic_list[:-3]})
+                          'page_content': page_content, 'pic_list': pic_list[:-2]})
         # print(news_list)
         return news_list
 
