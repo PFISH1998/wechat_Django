@@ -130,7 +130,6 @@ class GetNews:
         page_list = []
         pic_list = []
         for p in soup.find_all('p'):
-            str = ''
             # print(p)
             # 拿到 a 标签里的图片链接
             # print(str.join(p.stripped_strings))
@@ -147,11 +146,12 @@ class GetNews:
                 #     page_list.append({'pic': pic})
                 #     pic_list.append(pic)
                 #     continue
-            except:
+            except Exception as e:
+                print(e)
                 continue
 
             # 段落文字
-            page_content = str.join(p.stripped_strings)
+            page_content = ' '.join(p.stripped_strings)
             page_list.append({'content': page_content})
         page_content = page_list[:-5]
         news_list.append({'title': title, 'pub_time': pub_time, 'url': url,
