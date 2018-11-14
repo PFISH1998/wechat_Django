@@ -1,21 +1,49 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from tools.dean import get_grade_result, grade_process
-from tools.webcontent import Driver
-from selenium.common import exceptions
+from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process
+from django.contrib.auth.models import User
 import requests
 import json
-import time
 
 
 # Create your views here.
 
 def index(request):
+
     # data = json.loads(request.body.decode('utf-8'))
     # sid = data.get('sid')
     # pwd = data.get('sid')
     # print(sid, pwd)
     return HttpResponse('Django test Welcome')
+
+
+def register(request):
+    try:
+        # body = json.loads(request.body.decode('utf-8'))
+        body = request.POST
+        sid = body.get('username')
+        pwd = body.get('password')
+
+        print(sid, pwd)
+        user = User.objects.filter(username=sid)
+        if not user.exists():
+            result = user.create(username=sid, password=pwd)
+            # return HttpResponse('nouser')
+        else:
+            result = user.filter(username=sid).update(password=pwd)
+
+        return HttpResponse(json.dumps({
+            'user': sid,
+            'pwd': pwd,
+            'result': result
+        }))
+
+    except Exception as e:
+        print('exception', e)
+        return HttpResponse(json.dumps({
+            'error': e
+        }))
+
 
 
 def grade(request):
@@ -75,52 +103,50 @@ def time_table(request):
     body = json.loads(request.body.decode('utf-8'))
     sid = body.get('sid')
     pwd = body.get('pwd')
-    term = []
-    result = []
-    print(sid, pwd, 'timetable')
-    d = Driver(sid, pwd)
     try:
         try:
-            d.open_page()
-            html = d.get_timetable()
-            result = d.get_timetable_result(html)
-            print(result)
+            data = get_time_table_result(sid, pwd)
+            result = time_table_process(data)
             return HttpResponse(
                 json.dumps({
-                    'term': term,
                     'data': result,
                     'code': 200
                 }))
-        except exceptions.UnexpectedAlertPresentException:
-            print('学号或密码错误')
+        except requests.exceptions.ConnectionError as e:
+            print('网络连接出错', e)
             return HttpResponse(
                 json.dumps({
+                    'info': "服务器连接出错",
+                    'code': 1002
+                }))
+
+        except Exception as e:
+            print("1", e)
+            if str(e) == 'PasswordError':
+                print('密码错误', e)
+                return HttpResponse(json.dumps({
                     'code': 300,
+                    'info': '密码错误'
                 }))
-        except TypeError as e:
-            print('获取课表失败, type error', e)
-            return HttpResponse(
-                json.dumps({
+
+            elif str(e) == 'IdError':
+                print('用户名出错', e)
+                return HttpResponse(json.dumps({
                     'code': 1000,
-                    'info': '获取课表失败，请稍后重试'
+                    'info': '用户名不存在，请您确认登录身份'
                 }))
-        except exceptions.WebDriverException as e:
-            print('selenium error2, dean problem', e)
-            return HttpResponse(
-                json.dumps({
+            else:
+                print(e)
+                return HttpResponse(json.dumps({
                     'code': 1001,
-                    'info': '服务器出现了问题'
+                    'info': '获取课表失败，请稍后重试' + e
                 }))
-        finally:
-            print('销毁进程')
-            d.driver.quit()
-    except exceptions.WebDriverException as e:
-        print('selenium error1, network problem', e)
-        return HttpResponse(
-            json.dumps({
-                'code': 1002,
-                'info': '服务器出现了问题'
-            }))
+
+    except Exception as e:
+        print("其他问题", e)
+        return HttpResponse(json.dumps({
+            'code': 2222,
+            'info': '奇怪的问题，正在解决'
+        }))
     finally:
-        print('销毁进程')
-        d.driver.quit()
+        print('完成')
