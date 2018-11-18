@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from circle.models import CircleUser, Post
+from circle.models import CircleUser, Post, Comments
 
 
 class PostSerializers(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'nick_name', 'content', 'pub_time')
+        fields = ('id', 'nick_name', 'content',
+                  'pub_time', 'comments_count', 'like_count')
 
     def create(self, validated_data):
         return Post.objects.create(**validated_data)
@@ -21,3 +22,12 @@ class CircleUserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return CircleUser.objects.create(**validated_data)
+
+
+class CommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comments
+        fields = ('id', 'comment_content', 'circle', 'comment_time', 'from_user')
+
+    def create(self, validated_data):
+        return Comments.objects.create(**validated_data)
