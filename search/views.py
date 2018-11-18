@@ -1,3 +1,5 @@
+import time
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process
@@ -23,27 +25,29 @@ def register(request):
         body = request.POST
         sid = body.get('username')
         pwd = body.get('password')
-
         print(sid, pwd)
-        user = User.objects.filter(username=sid)
-        if not user.exists():
-            result = user.create(username=sid, password=pwd)
-            # return HttpResponse('nouser')
-        else:
-            result = user.filter(username=sid).update(password=pwd)
+        try:
 
-        return HttpResponse(json.dumps({
-            'user': sid,
-            'pwd': pwd,
-            'result': result
-        }))
+            user = User.objects.filter(username=sid)
+            if user.exists():
+                result = user.filter(username=sid).update(password=pwd)
+            else:
+                result = user.create(username=sid, password=pwd)
+                # return HttpResponse('nouser')
+        except Exception as e:
+            print('database', e)
+        finally:
+            return HttpResponse(json.dumps({
+                'user': sid,
+                'pwd': pwd,
+                'result': result
+            }))
 
     except Exception as e:
         print('exception', e)
         return HttpResponse(json.dumps({
             'error': e
         }))
-
 
 
 def grade(request):
@@ -55,10 +59,20 @@ def grade(request):
             grade, term = get_grade_result(sid, pwd)
             term_data = grade_process(grade, term)
             print("返回")
-            return HttpResponse(json.dumps({
-                'data': term_data,
-                'code': 200,
-            }))
+            try:
+                user = User.objects.filter(username=sid)
+                if user.exists():
+                    user.filter(username=sid).update(password=pwd)
+                else:
+                    user.create(username=sid, password=pwd)
+                    # return HttpResponse('nouser')
+            except Exception as e:
+                print('database', e)
+            finally:
+                return HttpResponse(json.dumps({
+                    'data': term_data,
+                    'code': 200,
+                }))
 
         except requests.exceptions.ConnectionError as e:
             print('网络连接出错', e)
@@ -100,18 +114,28 @@ def calendar(request, sid, pwd):
 
 
 def time_table(request):
-    body = json.loads(request.body.decode('utf-8'))
-    sid = body.get('sid')
-    pwd = body.get('pwd')
     try:
+        body = json.loads(request.body.decode('utf-8'))
+        sid = body.get('sid')
+        pwd = body.get('pwd')
         try:
             data = get_time_table_result(sid, pwd)
             result = time_table_process(data)
-            return HttpResponse(
-                json.dumps({
-                    'data': result,
-                    'code': 200
-                }))
+            try:
+                user = User.objects.filter(username=sid)
+                if user.exists():
+                    user.filter(username=sid).update(password=pwd)
+                else:
+                    user.create(username=sid, password=pwd)
+                    # return HttpResponse('nouser')
+            except Exception as e:
+                print('database', e)
+            finally:
+                return HttpResponse(
+                    json.dumps({
+                        'data': result,
+                        'code': 200
+                    }))
         except requests.exceptions.ConnectionError as e:
             print('网络连接出错', e)
             return HttpResponse(
