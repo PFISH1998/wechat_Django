@@ -1,3 +1,4 @@
+djangorestframework
 requests
 beautifulsoup4
 certifi==2018.4.16
