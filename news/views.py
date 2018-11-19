@@ -32,14 +32,15 @@ def news_list(request):
     except AttributeError:
         return HttpResponse(
             json.dumps({
-            'page_num':int(page_num),
+            'page_num': int(page_num),
         }))
     except ValueError:
         return HttpResponse(
             json.dumps({
                 'page_num': int(page_num),
             }))
-    except BaseException:
+    except BaseException as e:
+        print(e)
         return HttpResponse(
             json.dumps({
                 'page_num': int(page_num),
