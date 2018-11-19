@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080113a7-1435-4db6-a524-7a17269d42f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5efc7fe1-ce16-4369-acf4-1fa997f917ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5efc7fe1-ce16-4369-acf4-1fa997f917ff.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/circle/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/circle/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/circle/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/circle/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/settings.py" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,103 +61,90 @@
     <session id="865783555">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.14" value="3" />
-          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="auth_user" value="12" />
+          <entry key="auth_group" value="1" />
+          <entry key="auth_user" value="13" />
           <entry key="auth_user_groups" value="1" />
           <entry key="auth_user_user_permissions" value="1" />
-          <entry key="circle_circleuser" value="21" />
-          <entry key="circle_comments" value="6" />
-          <entry key="circle_like" value="1" />
-          <entry key="circle_post" value="9" />
+          <entry key="circle_circleuser" value="26" />
+          <entry key="circle_comments" value="8" />
+          <entry key="circle_like" value="4" />
+          <entry key="circle_post" value="15" />
           <entry key="django_admin_log" value="2" />
+          <entry key="http" value="2" />
           <entry key="json" value="1" />
           <entry key="log" value="1" />
           <entry key="news_news" value="1" />
-          <entry key="py" value="118" />
+          <entry key="py" value="127" />
           <entry key="sql" value="1" />
           <entry key="sqlite_master" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="56" />
+          <entry key="Database Element" value="74" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="107" />
-          <entry key="Scratch" value="1" />
+          <entry key="Python" value="116" />
+          <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="491" />
-          <entry key="cell" value="246" />
+          <entry key="cell" value="411" />
           <entry key="dummy" value="2" />
-          <entry key="py" value="7482" />
-          <entry key="sql" value="20" />
-          <entry key="txt" value="120" />
+          <entry key="py" value="8924" />
+          <entry key="sql" value="21" />
+          <entry key="txt" value="190" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="134" />
-          <entry key="Python" value="7961" />
-          <entry key="SQL" value="20" />
-          <entry key="Scratch" value="246" />
+          <entry key="PLAIN_TEXT" value="204" />
+          <entry key="Python" value="9403" />
+          <entry key="SQL" value="21" />
+          <entry key="Scratch" value="411" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/circle/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637">
-              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1542531334000" expanded="true" signature="196:201" ph="..." />
-                <marker date="1542531334000" expanded="true" signature="2197:2203" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_comments">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/circle/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
+            <state relative-caret-position="218">
+              <caret line="165" column="45" lean-forward="true" selection-start-line="165" selection-start-column="45" selection-end-line="165" selection-end-column="45" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
-                <marker date="1542535252000" expanded="true" signature="896:905" ph="..." />
-                <marker date="1542535252000" expanded="true" signature="3300:3309" ph="..." />
-                <marker date="1542535252000" expanded="true" signature="3313:3318" ph="..." />
-                <marker date="1542535252000" expanded="true" signature="3679:3684" ph="..." />
-                <marker date="1542535252000" expanded="true" signature="4515:4573" ph="..." />
+                <marker date="1542635860000" expanded="true" signature="918:927" ph="..." />
+                <marker date="1542635860000" expanded="true" signature="3886:3895" ph="..." />
+                <marker date="1542635860000" expanded="true" signature="3899:3904" ph="..." />
+                <marker date="1542635860000" expanded="true" signature="4254:4259" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wechat/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -164,14 +152,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/circle/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+            <state relative-caret-position="70">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1542534624000" expanded="true" signature="145:146" ph="..." />
-                <marker date="1542534624000" expanded="true" signature="145:150" ph="..." />
-                <marker date="1542534624000" expanded="true" signature="544:549" ph="..." />
-                <marker date="1542534624000" expanded="true" signature="817:822" ph="..." />
+                <marker date="1542635336000" expanded="true" signature="151:152" ph="..." />
+                <marker date="1542635336000" expanded="true" signature="151:156" ph="..." />
+                <marker date="1542635336000" expanded="true" signature="568:573" ph="..." />
+                <marker date="1542635336000" expanded="true" signature="835:840" ph="..." />
+                <marker date="1542635336000" expanded="true" signature="1107:1112" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,10 +170,19 @@
         <entry file="file://$PROJECT_DIR$/circle/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_like">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -194,6 +192,21 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/circle/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <marker date="1542634354000" expanded="true" signature="196:201" ph="..." />
+                <marker date="1542634354000" expanded="true" signature="2312:2318" ph="..." />
+                <marker date="1542634354000" expanded="true" signature="2841:2869" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -234,13 +247,13 @@
         <option value="$PROJECT_DIR$/tools/searchNews.py" />
         <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/wechat/urls.py" />
-        <option value="$PROJECT_DIR$/wechat/settings.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0004_post_nick_name.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0009_auto_20181117_1633.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0006_auto_20181117_1623.py" />
+        <option value="$PROJECT_DIR$/circle/urls.py" />
+        <option value="$PROJECT_DIR$/wechat/settings.py" />
         <option value="$PROJECT_DIR$/circle/models.py" />
         <option value="$PROJECT_DIR$/circle/serializers.py" />
-        <option value="$PROJECT_DIR$/circle/urls.py" />
         <option value="$PROJECT_DIR$/circle/views.py" />
       </list>
     </option>
@@ -251,18 +264,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1168" />
-    <option name="y" value="80" />
-    <option name="width" value="1580" />
-    <option name="height" value="1756" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="68" />
+    <option name="width" value="2762" />
+    <option name="height" value="1770" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,6 +296,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,26 +455,63 @@
       <option name="project" value="LOCAL" />
       <updated>1542513892464</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="基本完成REST-FRAMEWORK的视图">
+      <created>1542535304987</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1542535304987</updated>
+    </task>
+    <task id="LOCAL-00016" summary="增加URL">
+      <created>1542535337956</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542535337956</updated>
+    </task>
+    <task id="LOCAL-00017" summary="REST 序列化">
+      <created>1542535364283</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542535364283</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Circle 模型基本完成">
+      <created>1542535397457</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1542535397457</updated>
+    </task>
+    <task id="LOCAL-00019" summary="小更改">
+      <created>1542535431597</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1542535431597</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13907786" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13907786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" weight="0.52519894" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69161" visible="true" weight="0.2877984" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.69085413" visible="true" weight="0.44562334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4469496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.20026526" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.30839002" side_tool="true" weight="0.31299734" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3938992" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.30914587" side_tool="true" weight="0.4429708" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.50132626" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32891247" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.42307693" />
       <window_info anchor="bottom" id="File Transfer" order="13" weight="0.37931034" />
@@ -470,9 +520,36 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17762661" />
+      <window_info anchor="right" id="Database" order="4" weight="0.17762661" />
       <window_info anchor="right" id="Mongo Explorer" order="5" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13907786" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" order="0" weight="0.52519894" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.69085413" visible="true" weight="0.37931034" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4469496" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.20026526" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30914587" side_tool="true" weight="0.4429708" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.50132626" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32891247" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.42307693" />
+      <window_info anchor="bottom" id="File Transfer" order="14" weight="0.37931034" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32891247" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17762661" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -493,68 +570,14 @@
     <MESSAGE value="“圈子”序列化" />
     <MESSAGE value="“圈子”model" />
     <MESSAGE value="增加url" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加url" />
+    <MESSAGE value="基本完成REST-FRAMEWORK的视图" />
+    <MESSAGE value="增加URL" />
+    <MESSAGE value="REST 序列化" />
+    <MESSAGE value="Circle 模型基本完成" />
+    <MESSAGE value="小更改" />
+    <option name="LAST_COMMIT_MESSAGE" value="小更改" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/news/geckodriver.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="1751" column="68" selection-start-line="1751" selection-start-column="56" selection-end-line="1751" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e92affbf-4040-497f-ab3a-8db1755ea4bd/schema/main/table/sqlite_master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circle/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/searchNews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3066">
-          <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/dean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="131" column="45" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e92affbf-4040-497f-ab3a-8db1755ea4bd/schema/main/table/circle_post">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e92affbf-4040-497f-ab3a-8db1755ea4bd/schema/main/table/circle_circleuser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqllite.json" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5efc7fe1-ce16-4369-acf4-1fa997f917ff/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://e92affbf-4040-497f-ab3a-8db1755ea4bd/schema/main/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wechat/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -573,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,24 +698,10 @@
     <entry file="file://$PROJECT_DIR$/circle/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_like">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/MySQLdb/cursors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8046">
           <caret line="411" selection-start-line="411" selection-end-line="411" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -713,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/rest_framework/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5644">
@@ -727,15 +726,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circle/models.py">
+    <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1542531334000" expanded="true" signature="196:201" ph="..." />
-            <marker date="1542531334000" expanded="true" signature="2197:2203" ph="..." />
-          </folding>
+        <state relative-caret-position="489">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://d8d8bda4-d2c3-459d-bd88-bac4289f0296/schema/main/table/auth_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="300" selection-start-line="300" selection-end-line="300" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8d8bda4-d2c3-459d-bd88-bac4289f0296/schema/main/table/circle_circleuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8d8bda4-d2c3-459d-bd88-bac4289f0296/schema/main/table/circle_like">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_comments">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-784">
+          <caret line="136" column="71" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_circleuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -746,7 +802,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_group">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_comments">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1542635336000" expanded="true" signature="151:152" ph="..." />
+            <marker date="1542635336000" expanded="true" signature="151:156" ph="..." />
+            <marker date="1542635336000" expanded="true" signature="568:573" ph="..." />
+            <marker date="1542635336000" expanded="true" signature="835:840" ph="..." />
+            <marker date="1542635336000" expanded="true" signature="1107:1112" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_like">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -760,41 +862,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circle/serializers.py">
+    <entry file="file://$PROJECT_DIR$/circle/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        <state relative-caret-position="312">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1542534624000" expanded="true" signature="145:146" ph="..." />
-            <marker date="1542534624000" expanded="true" signature="145:150" ph="..." />
-            <marker date="1542534624000" expanded="true" signature="544:549" ph="..." />
-            <marker date="1542534624000" expanded="true" signature="817:822" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circle/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1542634354000" expanded="true" signature="196:201" ph="..." />
+            <marker date="1542634354000" expanded="true" signature="2312:2318" ph="..." />
+            <marker date="1542634354000" expanded="true" signature="2841:2869" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/circle/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
+        <state relative-caret-position="218">
+          <caret line="165" column="45" lean-forward="true" selection-start-line="165" selection-start-column="45" selection-end-line="165" selection-end-column="45" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-            <marker date="1542535252000" expanded="true" signature="896:905" ph="..." />
-            <marker date="1542535252000" expanded="true" signature="3300:3309" ph="..." />
-            <marker date="1542535252000" expanded="true" signature="3313:3318" ph="..." />
-            <marker date="1542535252000" expanded="true" signature="3679:3684" ph="..." />
-            <marker date="1542535252000" expanded="true" signature="4515:4573" ph="..." />
+            <marker date="1542635860000" expanded="true" signature="918:927" ph="..." />
+            <marker date="1542635860000" expanded="true" signature="3886:3895" ph="..." />
+            <marker date="1542635860000" expanded="true" signature="3899:3904" ph="..." />
+            <marker date="1542635860000" expanded="true" signature="4254:4259" ph="..." />
           </folding>
         </state>
       </provider>

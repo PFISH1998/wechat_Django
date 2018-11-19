@@ -24,7 +24,7 @@ SECRET_KEY = 'jsd904=_7x=7&x47+lrgy82_dsxg$+&h1-ht#m*b^9ag)^&nlg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['140.143.17.162', 'localhost ', 'wx.tomwang.club','127.0.0.1']
+ALLOWED_HOSTS = ['140.143.17.162', 'localhost ', 'wx.tomwang.club', '127.0.0.1']
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'news',
     'circle',
     # 'django_crontab',
+    'rest_framework',
 ]
 
 
@@ -80,18 +81,19 @@ WSGI_APPLICATION = 'wechat.wsgi.application'
 
 DATABASES = {
 
-    # 'default':{
-    #     'ENGINE':'django.db.backends.mysql',
-    #     'NAME':'wechatdb',
-    #     'USER':'root',
-    #     'PASSWORD':'pengyu',
-    #     'HOST':'127.0.0.1',
-    #     'PORT':'3306',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wechat',
+        'USER': 'pengyu',
+        'PASSWORD': 'pengyu1998',
+        'HOST': '140.143.17.162',
+        # 'HOST': '127.0.0.1',
+        'PORT': '3306',
+    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # Password validation
@@ -123,7 +125,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
