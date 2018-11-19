@@ -13,8 +13,9 @@ class Post(models.Model):  # 发布圈子
                             default='normal', max_length=30)   # 类型
 
     display = models.BooleanField(default=True)
-    like_count = models.PositiveIntegerField(default=0)  # 点赞数
-    comments_count = models.PositiveIntegerField(default=0)  # 评论数
+    like_count = models.IntegerField(default=0)  # 点赞数
+    dis_like_count = models.IntegerField(default=0)
+    comments_count = models.IntegerField(default=0)  # 评论数
 
     class Meta:
         ordering = ['-pub_time']
@@ -23,12 +24,14 @@ class Post(models.Model):  # 发布圈子
         self.comments_count += 1
         self.save(update_fields=['comments_count'])
 
-    def increase_like(self):
-        self.like_count += 1
+    def change_like(self, s):
+        self.like_count += 1 if s else -1  # 根据s与否 三元运算
         self.save(update_fields=['like_count'])
 
 
+
 class CircleUser(models.Model):  # 圈子用户表
+    user = models.IntegerField(auto_created=True)
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
     nick_name = models.CharField(max_length=120, unique=True, primary_key=True)  # 昵称
     we_name = models.CharField(max_length=120)  # 微信用户名
@@ -61,9 +64,12 @@ class Comments(models.Model):  # 评论表
 class Like(models.Model):  # 点赞表
     type_id = models.IntegerField()  # 点赞对象的 ID
     type = models.IntegerField(choices=(('1', '圈子'), ('2', '评论')))  # 点赞对象类型
-    user_id = models.IntegerField()  # 点赞人
+    nick_name = models.ForeignKey(CircleUser, on_delete=models.SET_NULL, null=True)  # 点赞人
     status = models.BooleanField(default=True)  # 点赞状态，是否取消
     like_time = models.DateTimeField(auto_now_add=True)  # 点赞时间
+
+    def __bool__(self):
+        return self.status
 
 
 
