@@ -1,0 +1,30 @@
+GET http://localhost:8080/circle/post/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/circle/user/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/circle/user/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
