@@ -65,15 +65,15 @@ class CircleUserList(APIView):
         circle_user = CircleUser.objects.filter(nick_name=request.data['nick_name'])
         print(circle_user)
         if circle_user.exists():
-            print("not")
-            return Response(status=status.HTTP_304_NOT_MODIFIED)
+            # print("not")
+            return Response(status=status.HTTP_304_NOT_MODIFIED, data='user exists')
 
         serializer = CircleUserSerializer(data=request.data)
         if serializer.is_valid():
-            print('yes')
+            # print('yes')
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_304_NOT_MODIFIED)
+        return Response(status=status.HTTP_304_NOT_MODIFIED, data='data not valid')
 
     def get(self, request):
         user = CircleUser.objects.all()
@@ -149,6 +149,16 @@ class CommentsList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return HttpResponse(status=status.HTTP_304_NOT_MODIFIED)
+
+
+class CommentNoteList(APIView):
+
+    def get(self, request, pk):  # 根据用户查找是否有未提醒的评论， pk 为用户ID
+        note = Comments.objects.filter(is_view=False, circle__uid=pk)
+        serializer = CommentsSerializer(note, many=True)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
 
 
 class LikeList(APIView):
