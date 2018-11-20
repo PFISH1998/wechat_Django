@@ -84,11 +84,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wechat',
-        'USER': 'pengyu',
-        'PASSWORD': 'pengyu1998',
-        'HOST': '140.143.17.162',
+        'USER': ' ',
+        'PASSWORD': ' ',
+        'HOST': ' ',
         # 'HOST': '127.0.0.1',
         'PORT': '3306',
+        'OPTIONS': {'charset': 'utf8mb4'},
+
     },
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -120,6 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Shanghai'
+
+DATETIME_FORMAT = 'Y-m-d H:i:s'
 
 USE_I18N = True
 
