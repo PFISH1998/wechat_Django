@@ -1,3 +1,4 @@
+from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 from django.urls import path
 
@@ -10,7 +11,10 @@ urlpatterns = [
     path('user/<int:pk>/', views.CircleUserDetail.as_view()),
 
     path('comments/<int:pk>/', views.CommentsList.as_view()),
+    path('comments-note/<int:pk>/', views.CommentNoteList.as_view()),
 
     path('like/<int:pk>/', views.LikeList.as_view())
 
 ]
+
+# urlpatterns = format_suffix_patterns(urlpatterns)
