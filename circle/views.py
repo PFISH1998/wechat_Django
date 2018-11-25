@@ -1,15 +1,50 @@
+import json
+
+import requests
 from django.http import HttpResponse, JsonResponse
+from django.utils.timezone import now
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from circle.serializers import PostSerializers, CircleUserSerializer, CommentsSerializer, LikeSerializer
 from circle.models import Post, CircleUser, Comments, Like
+from wechat.settings import appid, apps
+
+
+def get_open_id(request):
+    try:
+        body = json.loads(request.body.decode('utf-8'))
+        url = "https://api.weixin.qq.com/sns/jscode2session?appid={}&secret={}&js_code={}&grant_type=authorization_code"\
+            .format(appid, apps, body.get('code'))
+        r = requests.get(url)
+        data = json.loads(str(r.text))
+        print(data)
+        openid = data.get("openid")
+    except Exception as e:
+        print(e)
+
+    try:
+        circle_user = CircleUser.objects.filter(uid=openid)
+        if circle_user.exists():
+            circle_user.update(last_login=now())
+            return HttpResponse(json.dumps({
+                'data': data.get("openid"),
+                'code': 200
+            }))
+    except Exception as e:
+        print(e)
+        return HttpResponse(json.dumps({
+            'data': data.get("openid"),
+            'code': 300
+        }))
 
 
 class PostList(APIView):
+
     def get(self, request):
+        uid = request.GET['uid']
         post = Post.objects.filter(display=True)
-        serializer = PostSerializers(post, many=True)
+        serializer = PostSerializers(post, many=True, context={"uid": uid})
         return Response(serializer.data)
 
     def post(self, request):
@@ -72,8 +107,8 @@ class CircleUserList(APIView):
         if serializer.is_valid():
             # print('yes')
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_304_NOT_MODIFIED, data='data not valid')
+            return Response(data=circle_user.get, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_403_FORBIDDEN, data='data not valid')
 
     def get(self, request):
         user = CircleUser.objects.all()
@@ -166,8 +201,8 @@ class LikeList(APIView):
     def post(self, request, pk):
         try:
             post = Post.objects.get(display=True, pk=pk)
-            user_id = request.data['nick_name']
-            like = Like.objects.filter(nick_name_id=user_id, type_id=pk, type=1)
+            uid = request.data['uid']
+            like = Like.objects.filter(uid=uid, post_id=pk, type=1)
             like_status = True
             if like.exists():  # 不存在直接插入数据。存在既更新，将点赞状态取反
                 for i in like:
@@ -177,7 +212,7 @@ class LikeList(APIView):
                 post.save()
                 return HttpResponse(status=status.HTTP_201_CREATED)
 
-            Like.objects.create(nick_name_id=user_id, type_id=pk, type=1)
+            Like.objects.create(uid=uid, post_id=pk, type=1)
             post.change_like(like_status)
             post.save()
             return HttpResponse(status=status.HTTP_201_CREATED)
@@ -188,7 +223,7 @@ class LikeList(APIView):
 
     def get(self, request, pk):
         try:
-            like = Like.objects.get(type_id=pk)
+            like = Like.objects.get(post_id=pk)
         except Like.DoesNotExist:
             return HttpResponse(status=status.HTTP_404_NOT_FOUND)
 
