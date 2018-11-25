@@ -13,7 +13,9 @@ urlpatterns = [
     path('comments/<int:pk>/', views.CommentsList.as_view()),
     path('comments-note/<int:pk>/', views.CommentNoteList.as_view()),
 
-    path('like/<int:pk>/', views.LikeList.as_view())
+    path('like/<int:pk>/', views.LikeList.as_view()),
+
+    path('uid/', views.get_open_id)
 
 ]
 
