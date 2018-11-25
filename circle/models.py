@@ -30,11 +30,11 @@ class Post(models.Model):  # 发布圈子
 
 
 class CircleUser(models.Model):  # 圈子用户表
-    uid = models.IntegerField(primary_key=True)
+    uid = models.CharField(max_length=100, primary_key=True)
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nick_name = models.CharField(max_length=120, unique=True)  # 昵称
+    nick_name = models.CharField(max_length=120)  # 昵称
     we_name = models.CharField(max_length=120)  # 微信用户名
-    head_pic = models.FileField(max_length=200, null=True, blank=True)  # 头像
+    head_pic = models.CharField(max_length=500, null=True, blank=True)  # 头像
     description = models.CharField(max_length=500, null=True)  # 自我描述
     display = models.BooleanField(default=True)  # 展示状态
     type = models.CharField(default='normal',
@@ -43,14 +43,16 @@ class CircleUser(models.Model):  # 圈子用户表
                                      ('admin', '管理员')), max_length=120)  # 用户类型
     is_active = models.BooleanField(default=True)  # 是否为活动用户
     date_join = models.DateTimeField(auto_now_add=True, blank=True, null=True)  # 注册时间
+    last_login = models.DateTimeField(blank=True, null=True)
     remark = models.CharField(null=True, blank=True, max_length=200)  # 后台备注
+    gender = models.CharField(max_length=20, null=True, blank=True)
 
 
 class Comments(models.Model):  # 评论表
     circle = models.ForeignKey('Post', on_delete=models.CASCADE)  # 被评论的内容
     comment_content = models.TextField()  # 评论内容
     comment_time = models.DateTimeField(auto_now_add=True)  # 评论时间
-    from_user = models.ForeignKey('CircleUser', on_delete=models.CASCADE)  # 评论人
+    from_user = models.ForeignKey('CircleUser', on_delete=models.SET_NULL, null=True)  # 评论人
     is_view = models.BooleanField(default=False)  # 是否已经提醒
 
 
@@ -61,10 +63,11 @@ class Comments(models.Model):  # 评论表
     # view = models
 
 
+
 class Like(models.Model):  # 点赞表
-    type_id = models.IntegerField()  # 点赞对象的 ID
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)  # 点赞对象的 ID
     type = models.IntegerField(choices=(('1', '圈子'), ('2', '评论')))  # 点赞对象类型
-    nick_name = models.ForeignKey(CircleUser, on_delete=models.CASCADE, null=True)  # 点赞人
+    uid = models.ForeignKey('CircleUser', on_delete=models.CASCADE)  # 点赞人
     status = models.BooleanField(default=True)  # 点赞状态，是否取消
     like_time = models.DateTimeField(auto_now_add=True)  # 点赞时间
 
