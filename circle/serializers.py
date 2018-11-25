@@ -7,25 +7,43 @@ class PostSerializers(serializers.ModelSerializer):
     comments_count = serializers.IntegerField(read_only=True, required=False)
     like_count = serializers.IntegerField(read_only=True, required=False)
     post_user = serializers.CharField(source='uid.nick_name', required=False)
+    head_pic = serializers.CharField(source='uid.head_pic', required=False)
+    is_like = serializers.SerializerMethodField()
 
     class Meta:
         model = Post
-        fields = ('id', 'post_user', 'uid', 'content',
-                  'pub_time', 'comments_count', 'like_count', 'dis_like_count')
+        fields = ('id', 'post_user', 'head_pic', 'uid', 'content',
+                  'pub_time', 'comments_count', 'like_count',
+                  'is_like', 'dis_like_count')
 
     def create(self, validated_data):
         return Post.objects.create(**validated_data)
+
+    def get_is_like(self, obj):
+        print(obj.id)
+        is_like = Like.objects.filter(uid=self.context['uid'],
+                                      status=True, post_id=obj.id)
+        if is_like.exists():
+            print('true')
+            return True
+        else:
+            print('false')
+            return False
+
+
+
+
 
     # def update(self, instance, validated_data):
     #     instance.content = validated_data.get()
 
 
 class CircleUserSerializer(serializers.ModelSerializer):
-    uid = serializers.IntegerField(read_only=True)
+    # uid = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = CircleUser
-        fields = ('uid', 'nick_name', 'we_name', 'head_pic', 'description')
+        fields = ('uid', 'nick_name', 'we_name', 'head_pic', 'description', 'gender')
 
     def create(self, validated_data):
         return CircleUser.objects.create(**validated_data)
@@ -46,12 +64,12 @@ class CommentsSerializer(serializers.ModelSerializer):
 #     comment_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True, required=False)
 
 
-
 class LikeSerializer(serializers.ModelSerializer):
     like_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True, required=False)
+
     class Meta:
         model = Like
-        fields = ('id', 'type_id', 'type', 'nick_name', 'like_time')
+        fields = ('id', 'post_id', 'type', 'uid', 'like_time')
 
     def create(self, validated_data):
         return Like.objects.create(**validated_data)
