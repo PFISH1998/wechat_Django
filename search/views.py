@@ -1,3 +1,4 @@
+import gc
 import time
 
 from django.shortcuts import render
@@ -48,6 +49,8 @@ def register(request):
         return HttpResponse(json.dumps({
             'error': e
         }))
+    finally:
+        gc.collect()
 
 
 def grade(request):
@@ -106,6 +109,7 @@ def grade(request):
                 'info': '奇怪的问题，正在解决'
             }))
     finally:
+        gc.collect()
         print('完成')
 
 
@@ -173,4 +177,5 @@ def time_table(request):
             'info': '奇怪的问题，正在解决'
         }))
     finally:
+        gc.collect()
         print('完成')

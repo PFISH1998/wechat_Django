@@ -1,3 +1,5 @@
+import gc
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from tools.searchNews import GetNews
@@ -8,14 +10,20 @@ g = GetNews()
 
 
 def content(request):
-    print(request.GET['content'])
+    # print(request.GET['content'])
     url = request.GET['content']
-    print(url)
-    news_content = g.get_page_content(url)
+    # print(url)
+    try:
+        news_content = g.get_page_content(url)
 
-    return HttpResponse(json.dumps({
-        'news_content': news_content
-    }))
+        return HttpResponse(json.dumps({
+            'news_content': news_content
+        }))
+    except Exception as e:
+        print(e)
+        return HttpResponse(status=500)
+    finally:
+        gc.collect()
 
 
 def news_list(request):
@@ -45,6 +53,8 @@ def news_list(request):
             json.dumps({
                 'page_num': int(page_num),
             }))
+    finally:
+        gc.collect()
 
 
 
