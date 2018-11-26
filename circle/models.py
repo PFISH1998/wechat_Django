@@ -66,9 +66,9 @@ class Comments(models.Model):  # 评论表
 
 class Like(models.Model):  # 点赞表
     post = models.ForeignKey('Post', on_delete=models.CASCADE)  # 点赞对象的 ID
-    type = models.IntegerField(choices=(('1', '圈子'), ('2', '评论')))  # 点赞对象类型
+    type = models.IntegerField(choices=((1, '圈子'), (2, '评论')))  # 点赞对象类型
     uid = models.ForeignKey('CircleUser', on_delete=models.CASCADE)  # 点赞人
-    status = models.BooleanField(default=True)  # 点赞状态，是否取消
+    status = models.BooleanField()  # 点赞状态，是否取消
     like_time = models.DateTimeField(auto_now_add=True)  # 点赞时间
 
     def __bool__(self):

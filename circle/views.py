@@ -199,6 +199,45 @@ class CommentNoteList(APIView):
 class LikeList(APIView):
 
     def post(self, request, pk):
+        print(request.data["uid"])
+        try:
+            post = Post.objects.get(display=True, pk=pk)
+            like = Like.objects.get(post=pk, uid=request.data['uid'])  #有记录则更新
+            print(like)
+            serializer = LikeSerializer(like, data=request.data)
+        except Like.DoesNotExist:
+            serializer = LikeSerializer(data=request.data)
+        finally:
+            if serializer.is_valid():
+                serializer.save()
+                post.change_like(request.data['status'])
+                return HttpResponse(status=status.HTTP_201_CREATED)
+
+            return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
+
+
+    def get(self, request, pk):
+        try:
+            like = Like.objects.get(post_id=pk)
+        except Like.DoesNotExist:
+            return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+
+        serializer = LikeSerializer(like)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+    def post(self, request, pk):
         try:
             post = Post.objects.get(display=True, pk=pk)
             uid = request.data['uid']
@@ -220,15 +259,10 @@ class LikeList(APIView):
         except Post.DoesNotExist:
             # print(e)
             return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
+"""
 
-    def get(self, request, pk):
-        try:
-            like = Like.objects.get(post_id=pk)
-        except Like.DoesNotExist:
-            return HttpResponse(status=status.HTTP_404_NOT_FOUND)
 
-        serializer = LikeSerializer(like)
-        return Response(serializer.data)
+
 
 
 
