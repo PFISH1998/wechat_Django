@@ -20,17 +20,18 @@ def get_open_id(request):
         data = json.loads(str(r.text))
         print(data)
         openid = data.get("openid")
-    except Exception as e:
-        print(e)
+        CircleUser.objects.get(uid=openid)
+        CircleUser.objects.update(last_login=now())
+        return HttpResponse(json.dumps({
+            'data': data.get("openid"),
+            'code': 201
+        }))
+    except CircleUser.DoesNotExist:
+        return HttpResponse(json.dumps({
+            'data': data.get("openid"),
+            'code': 202
+        }))
 
-    try:
-        circle_user = CircleUser.objects.filter(uid=openid)
-        if circle_user.exists():
-            circle_user.update(last_login=now())
-            return HttpResponse(json.dumps({
-                'data': data.get("openid"),
-                'code': 200
-            }))
     except Exception as e:
         print(e)
         return HttpResponse(json.dumps({
@@ -51,7 +52,7 @@ class PostList(APIView):
         serializer = PostSerializers(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(status=status.HTTP_201_CREATED)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -71,7 +72,7 @@ class PostDetail(APIView):
             return HttpResponse(status=status.HTTP_404_NOT_FOUND)
 
         serializer = PostSerializers(post)
-        return JsonResponse(serializer.data, safe=False)
+        return Response(serializer.data, safe=False)
 
     def put(self, request, pk):
         try:
@@ -105,9 +106,9 @@ class CircleUserList(APIView):
 
         serializer = CircleUserSerializer(data=request.data)
         if serializer.is_valid():
-            # print('yes')
+            print('yes')
             serializer.save()
-            return Response(data=circle_user.get, status=status.HTTP_201_CREATED)
+            return Response(status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_403_FORBIDDEN, data='data not valid')
 
     def get(self, request):
