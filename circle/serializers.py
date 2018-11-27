@@ -8,7 +8,7 @@ class PostSerializers(serializers.ModelSerializer):
     like_count = serializers.IntegerField(read_only=True, required=False)
     post_user = serializers.CharField(source='uid.nick_name', required=False)
     head_pic = serializers.CharField(source='uid.head_pic', required=False)
-    is_like = serializers.SerializerMethodField()
+    is_like = serializers.SerializerMethodField(read_only=True, required=False)
 
     class Meta:
         model = Post
@@ -20,14 +20,10 @@ class PostSerializers(serializers.ModelSerializer):
         return Post.objects.create(**validated_data)
 
     def get_is_like(self, obj):
-        print(obj.id)
-        is_like = Like.objects.filter(uid=self.context['uid'],
-                                      status=True, post_id=obj.id)
-        if is_like.exists():
-            print('true')
+        try:
+            Like.objects.get(uid=self.context['uid'], status=True, post_id=obj.id)
             return True
-        else:
-            print('false')
+        except Like.DoesNotExist:
             return False
 
 
