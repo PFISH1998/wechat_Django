@@ -36,7 +36,7 @@ class GetNews:
             # 新闻标题，链接
             for result in re.compile(r'.*?href=\'(.*?).html\'.*?title=\'(.*?)\'').findall(news):
                 title = result[1]
-                url = 'http://www.fzxy.edu.cn{u}.html'.format(u=result[0])
+                url = 'http://211.71.233.21{u}.html'.format(u=result[0])
                 try:
                     # print('get:', title, url)
                     pub_time, content = self.get_info(url)
@@ -78,7 +78,7 @@ class GetNews:
             for result in re.compile(r'.*?href=\'(.*?).html\'.*?title=\'(.*?)\'').findall(news):
                 title = result[1]
                 try:
-                    purl = 'http://www.cidp.edu.cn' + result[0] + '.html'
+                    purl = 'http://211.71.233.21' + result[0] + '.html'
                     print('get:', title, purl)
                     page_content, pub_time = self.get_news_content(purl)
                 except BaseException:
@@ -103,7 +103,7 @@ class GetNews:
             # print(str.join(p.stripped_strings))
             try:
                 for a in p.find_all('a'):
-                    pic_url = 'http://www.cidp.edu.cn' + a['href']
+                    pic_url = 'http://211.71.233.21' + a['href']
                     page_list.append({'pic': pic_url})
                     continue
             except:
@@ -121,7 +121,7 @@ class GetNews:
         # 服务器编码问题
         r.encoding = 'utf-8-sig'
         html = r.text
-        # print(html)
+        print(html)
         news_list = []
         title = re.compile(r'<meta name="ArticleTitle" content="(.*?)">').findall(html)[0]
         pub_time = re.compile(r'<meta name="PubDate" content="(.*?)">').findall(html)[0]
@@ -136,7 +136,7 @@ class GetNews:
             try:
                 for a in p.find_all('a'):
                     # print(a)
-                    pic_url = 'http://www.cidp.edu.cn' + a['href']
+                    pic_url = 'http://211.71.233.21' + a['href']
                     page_list.append({'pic': pic_url})
                     pic_list.append(pic_url)
                     continue
@@ -165,10 +165,4 @@ class GetNews:
 
 
 
-
-    # def save_data(news_list):
-    #     db = pymysql.connect("localhost:3306", "root", "pengyu1998", "wechatdb")
-    #     cursor = db.cursor()
-    #     for news in news_list:
-    #         cursor.execute("INSERT INTO NEWS_NEWS")
 
