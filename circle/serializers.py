@@ -70,5 +70,5 @@ class LikeSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return Like.objects.create(**validated_data)
 
-    def update(self, instance, validated_data):
-        return Like.objects.update(**validated_data)
+    # def update(self, instance, validated_data):
+    #     return Like.objects.update(**validated_data)

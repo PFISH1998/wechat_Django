@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="080113a7-1435-4db6-a524-7a17269d42f2" name="Default Changelist" comment="..">
+    <list default="true" id="353b128a-9494-4785-a5db-22dbcf5ec1f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tools/news.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5efc7fe1-ce16-4369-acf4-1fa997f917ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5efc7fe1-ce16-4369-acf4-1fa997f917ff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e92affbf-4040-497f-ab3a-8db1755ea4bd.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circle/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circle/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,6 +15,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/wechat$views.coverage" NAME="views Coverage Results" MODIFIED="1533968029115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/login" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -28,22 +33,7 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="ubuntu" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ubuntu" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ubuntu" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="wechat: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -55,65 +45,70 @@
     <session id="865783555">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="34" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.16" value="3" />
-          <entry key="project.open.time.19" value="3" />
+          <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="4" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="auth_group" value="1" />
-          <entry key="auth_user" value="13" />
-          <entry key="auth_user_groups" value="1" />
+          <entry key="auth_user" value="14" />
+          <entry key="auth_user_groups" value="2" />
           <entry key="auth_user_user_permissions" value="1" />
-          <entry key="circle_circleuser" value="26" />
-          <entry key="circle_comments" value="10" />
-          <entry key="circle_like" value="5" />
-          <entry key="circle_post" value="16" />
+          <entry key="circle_circleuser" value="30" />
+          <entry key="circle_comments" value="12" />
+          <entry key="circle_like" value="8" />
+          <entry key="circle_post" value="19" />
           <entry key="django_admin_log" value="2" />
           <entry key="http" value="2" />
           <entry key="json" value="1" />
           <entry key="log" value="1" />
           <entry key="news_news" value="1" />
-          <entry key="py" value="133" />
+          <entry key="py" value="162" />
           <entry key="sql" value="1" />
           <entry key="sqlite_master" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="78" />
+          <entry key="Database Element" value="92" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="122" />
+          <entry key="Python" value="151" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="491" />
-          <entry key="cell" value="451" />
+          <entry key="cell" value="457" />
           <entry key="dummy" value="2" />
-          <entry key="py" value="9634" />
+          <entry key="py" value="11998" />
           <entry key="sql" value="22" />
-          <entry key="txt" value="281" />
+          <entry key="txt" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="295" />
-          <entry key="Python" value="10113" />
+          <entry key="PLAIN_TEXT" value="353" />
+          <entry key="Python" value="12477" />
           <entry key="SQL" value="22" />
-          <entry key="Scratch" value="451" />
+          <entry key="Scratch" value="457" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -129,25 +124,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/circle/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3192">
-              <caret line="157" column="55" selection-start-line="157" selection-start-column="55" selection-end-line="157" selection-end-column="55" />
+            <state relative-caret-position="4389">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
-                <marker date="1542718604000" expanded="true" signature="918:927" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="3933:3942" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="3946:3951" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="4301:4306" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5113:5380" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5150" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5152" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5154" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5156" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5158" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5159" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5160" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5162" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5163" ph="..." />
-                <marker date="1542718604000" expanded="true" signature="5146:5165" ph="..." />
+                <element signature="e#0#104#0" expanded="true" />
+                <marker date="1544182156000" expanded="true" signature="463:1391" ph="..." />
+                <marker date="1544182156000" expanded="true" signature="6453:7658" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,86 +138,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/circle/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="45" column="106" selection-start-line="45" selection-start-column="106" selection-end-line="45" selection-end-column="106" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1542717424000" expanded="true" signature="483:484" ph="..." />
-                <marker date="1542717424000" expanded="true" signature="483:488" ph="..." />
-                <marker date="1542717424000" expanded="true" signature="959:964" ph="..." />
-                <marker date="1542717424000" expanded="true" signature="1339:1344" ph="..." />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/circle/urls.py">
+        <entry file="file://$PROJECT_DIR$/tools/searchNews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+            <state relative-caret-position="165">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/news/views.py">
+        <entry file="file://$PROJECT_DIR$/tools/news.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/circle/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="251">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1542717692000" expanded="true" signature="187:192" ph="..." />
-                <marker date="1542717692000" expanded="true" signature="2375:2381" ph="..." />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_circleuser">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_post">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_comments">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/news/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -263,18 +200,19 @@
         <option value="$PROJECT_DIR$/tools/dean.py" />
         <option value="$PROJECT_DIR$/search/models.py" />
         <option value="$PROJECT_DIR$/search/urls.py" />
-        <option value="$PROJECT_DIR$/tools/searchNews.py" />
-        <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0004_post_nick_name.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0009_auto_20181117_1633.py" />
         <option value="$PROJECT_DIR$/circle/migrations/0006_auto_20181117_1623.py" />
         <option value="$PROJECT_DIR$/wechat/urls.py" />
-        <option value="$PROJECT_DIR$/circle/serializers.py" />
-        <option value="$PROJECT_DIR$/circle/models.py" />
-        <option value="$PROJECT_DIR$/circle/urls.py" />
-        <option value="$PROJECT_DIR$/circle/views.py" />
+        <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/wechat/settings.py" />
+        <option value="$PROJECT_DIR$/circle/urls.py" />
+        <option value="$PROJECT_DIR$/circle/models.py" />
+        <option value="$PROJECT_DIR$/tools/searchNews.py" />
+        <option value="$PROJECT_DIR$/circle/serializers.py" />
+        <option value="$PROJECT_DIR$/circle/views.py" />
         <option value="$PROJECT_DIR$/news/views.py" />
+        <option value="$PROJECT_DIR$/tools/news.py" />
       </list>
     </option>
   </component>
@@ -285,16 +223,18 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="y" value="68" />
-    <option name="width" value="2762" />
-    <option name="height" value="1770" />
+    <option name="x" value="-8" />
+    <option name="y" value="32" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,16 +257,10 @@
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,7 +315,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="080113a7-1435-4db6-a524-7a17269d42f2" name="Default Changelist" comment="" />
+      <changelist id="353b128a-9494-4785-a5db-22dbcf5ec1f3" name="Default Changelist" comment="" />
       <created>1540457110662</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -597,52 +531,119 @@
       <option name="project" value="LOCAL" />
       <updated>1542723073348</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="更改了一些模型">
+      <created>1543161922164</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1543161922165</updated>
+    </task>
+    <task id="LOCAL-00032" summary="增加login获取openid">
+      <created>1543161950220</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1543161950220</updated>
+    </task>
+    <task id="LOCAL-00033" summary="增加login获取openid">
+      <created>1543161959337</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1543161959337</updated>
+    </task>
+    <task id="LOCAL-00034" summary="增加点赞判断">
+      <created>1543161984736</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1543161984736</updated>
+    </task>
+    <task id="LOCAL-00035" summary="垃圾回收">
+      <created>1543162103952</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1543162103953</updated>
+    </task>
+    <task id="LOCAL-00036" summary="修复点赞的问题">
+      <created>1543235492366</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1543235492366</updated>
+    </task>
+    <task id="LOCAL-00037" summary="..">
+      <created>1543303313622</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1543303313622</updated>
+    </task>
+    <task id="LOCAL-00038" summary="..">
+      <created>1543303332520</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1543303332520</updated>
+    </task>
+    <task id="LOCAL-00039" summary="优化登录判断逻辑">
+      <created>1543303351150</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1543303351150</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13907786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10127932" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69085413" weight="0.39920425" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6900983" visible="true" weight="0.49566162" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4469496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32625994" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.30914587" side_tool="true" weight="0.4429708" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35676393" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.28514588" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.30990174" side_tool="true" weight="0.37533155" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.38328913" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32891247" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.42307693" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.37931034" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.3806366" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32891247" />
       <window_info anchor="bottom" id="REST Client" order="15" weight="0.52519894" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17762661" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15138593" />
       <window_info anchor="right" id="Mongo Explorer" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="加入 circle app" />
-    <MESSAGE value="更改数据库，加入 circle app" />
-    <MESSAGE value="改变爬取方式" />
-    <MESSAGE value="改变爬虫方法" />
-    <MESSAGE value="改变爬虫方法,完成课表成绩查询优化" />
-    <MESSAGE value="更新圈子models" />
     <MESSAGE value="更新查询models，记录查询信息" />
     <MESSAGE value="优化" />
     <MESSAGE value="“圈子”序列化" />
@@ -661,99 +662,18 @@
     <MESSAGE value="增加Post序列化时的字段" />
     <MESSAGE value="增加评论提醒url" />
     <MESSAGE value="增加评论提醒" />
+    <MESSAGE value="更改了一些模型" />
+    <MESSAGE value="增加login获取openid" />
+    <MESSAGE value="增加点赞判断" />
+    <MESSAGE value="垃圾回收" />
+    <MESSAGE value="修复点赞的问题" />
     <MESSAGE value=".." />
-    <option name="LAST_COMMIT_MESSAGE" value=".." />
+    <MESSAGE value="优化登录判断逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化登录判断逻辑" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/django_admin_log">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/requests/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627">
-          <caret line="594" column="25" selection-start-line="594" selection-start-column="21" selection-end-line="594" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/views/decorators/csrf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/views/generic/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="494" selection-start-line="494" selection-end-line="494" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/rest_framework/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/utils/deprecation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0007_remove_post_nick_name.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0002_remove_post_nick_name.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0004_post_nick_name.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0009_auto_20181117_1633.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0006_auto_20181117_1623.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0005_auto_20181117_1422.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0003_auto_20181117_1129.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0010_auto_20181117_1639.py" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0008_remove_circleuser_nick_name.py" />
-    <entry file="das://e92affbf-4040-497f-ab3a-8db1755ea4bd/schema/main/table/circle_comments" />
-    <entry file="file://$PROJECT_DIR$/circle/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-549">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circle/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_user_groups">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/circle/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -762,34 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8046">
           <caret line="411" selection-start-line="411" selection-end-line="411" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="494" selection-start-line="494" selection-end-line="494" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5644">
-          <caret line="744" column="64" selection-start-line="744" selection-start-column="64" selection-end-line="744" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -809,13 +701,7 @@
     </entry>
     <entry file="das://d8d8bda4-d2c3-459d-bd88-bac4289f0296/schema/main/table/circle_circleuser" />
     <entry file="das://d8d8bda4-d2c3-459d-bd88-bac4289f0296/schema/main/table/circle_like" />
-    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_comments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_comments" />
     <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-784">
@@ -823,33 +709,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_circleuser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_circleuser" />
+    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_post" />
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_group" />
+    <entry file="file://$PROJECT_DIR$/tools/webcontent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3150">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>
-    <entry file="das://eaccd173-cb21-43c4-a165-957b78e18304/schema/main/table/circle_post">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_group">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/http/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-601">
+          <caret line="282" selection-start-line="282" selection-end-line="282" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="77" column="19" selection-start-line="74" selection-start-column="16" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="476" selection-start-line="476" selection-end-line="476" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wechat/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="19" />
+        <state>
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/django/core/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_user_groups" />
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/auth_user" />
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_circleuser" />
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_post" />
+    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_comments" />
+    <entry file="file://$PROJECT_DIR$/news/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
           <folding>
-            <element signature="e#627#659#0" expanded="true" />
+            <marker date="1543300030000" expanded="true" signature="806:811" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/wechat/Lib/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-213">
+          <caret line="971" lean-forward="true" selection-start-line="971" selection-end-line="971" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4389">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+          <folding>
+            <element signature="e#0#104#0" expanded="true" />
+            <marker date="1544182156000" expanded="true" signature="463:1391" ph="..." />
+            <marker date="1544182156000" expanded="true" signature="6453:7658" ph="..." />
           </folding>
         </state>
       </provider>
@@ -861,108 +832,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circle/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3192">
-          <caret line="157" column="55" selection-start-line="157" selection-start-column="55" selection-end-line="157" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-            <marker date="1542718604000" expanded="true" signature="918:927" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="3933:3942" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="3946:3951" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="4301:4306" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5113:5380" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5150" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5152" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5154" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5156" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5158" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5159" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5160" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5162" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5163" ph="..." />
-            <marker date="1542718604000" expanded="true" signature="5146:5165" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circle/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="45" column="106" selection-start-line="45" selection-start-column="106" selection-end-line="45" selection-end-column="106" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1542717424000" expanded="true" signature="483:484" ph="..." />
-            <marker date="1542717424000" expanded="true" signature="483:488" ph="..." />
-            <marker date="1542717424000" expanded="true" signature="959:964" ph="..." />
-            <marker date="1542717424000" expanded="true" signature="1339:1344" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circle/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_circleuser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_post">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5efc7fe1-ce16-4369-acf4-1fa997f917ff/schema/wechat/table/circle_comments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circle/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1542717692000" expanded="true" signature="187:192" ph="..." />
-            <marker date="1542717692000" expanded="true" signature="2375:2381" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/searchNews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/news/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="86">
+          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/news.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

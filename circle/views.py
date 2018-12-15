@@ -1,15 +1,16 @@
-import json
-
-import requests
-from django.http import HttpResponse, JsonResponse
-from django.utils.timezone import now
-from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from circle.serializers import PostSerializers, CircleUserSerializer, CommentsSerializer, LikeSerializer
 from circle.models import Post, CircleUser, Comments, Like
+from django.http import HttpResponse, JsonResponse
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from django.utils.timezone import now
+from rest_framework import status
 from wechat.settings import appid, apps
+import requests
+import json
 
+
+# 登录功能，未完善， 将继续封装成类
 
 def get_open_id(request):
     try:
@@ -40,6 +41,7 @@ def get_open_id(request):
         }))
 
 
+# 发布圈子功能
 class PostList(APIView):
 
     def get(self, request):
@@ -72,7 +74,7 @@ class PostDetail(APIView):
             return HttpResponse(status=status.HTTP_404_NOT_FOUND)
 
         serializer = PostSerializers(post)
-        return Response(serializer.data, safe=False)
+        return Response(serializer.data)
 
     def put(self, request, pk):
         try:
@@ -195,26 +197,35 @@ class CommentNoteList(APIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-
-
 class LikeList(APIView):
 
     def post(self, request, pk):
         print(request.data["uid"])
         try:
             post = Post.objects.get(display=True, pk=pk)
-            like = Like.objects.get(post=pk, uid=request.data['uid'])  #有记录则更新
-            print(like)
-            serializer = LikeSerializer(like, data=request.data)
+            like = Like.objects.get(post=pk, uid=request.data['uid'])  #有记录则更新  改成删除
+            Like.delete(like)
+            post.change_like(request.data['status'])
+            return HttpResponse(status=status.HTTP_201_CREATED)
         except Like.DoesNotExist:
             serializer = LikeSerializer(data=request.data)
-        finally:
             if serializer.is_valid():
                 serializer.save()
-                post.change_like(request.data['status'])
-                return HttpResponse(status=status.HTTP_201_CREATED)
+            post.change_like(request.data['status'])
+            return HttpResponse(status=status.HTTP_201_CREATED)
 
+        except Post.DoesNotExist:
             return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            print(e)
+
+
+
+
+
+
+        # return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
 
 
     def get(self, request, pk):
