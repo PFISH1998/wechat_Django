@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="353b128a-9494-4785-a5db-22dbcf5ec1f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="353b128a-9494-4785-a5db-22dbcf5ec1f3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,12 +94,12 @@
           <entry key="dummy" value="2" />
           <entry key="py" value="12808" />
           <entry key="sql" value="22" />
-          <entry key="txt" value="339" />
+          <entry key="txt" value="349" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="353" />
+          <entry key="PLAIN_TEXT" value="363" />
           <entry key="Python" value="13287" />
           <entry key="SQL" value="22" />
           <entry key="Scratch" value="457" />
@@ -149,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/news/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="378">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="e#1#37#0" expanded="true" />
               </folding>
@@ -188,11 +184,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/dean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state relative-caret-position="480">
+              <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -612,14 +608,20 @@
       <option name="project" value="LOCAL" />
       <updated>1543303351150</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="优化新闻页面">
+      <created>1546092103483</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1546092103484</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2742" y="-3" width="1381" height="885" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17157975" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17157975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -630,19 +632,19 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.28514588" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.14190981" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.30990174" side_tool="true" weight="0.37533155" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.38328913" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32891247" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.42307693" />
-      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.3501326" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.3501326" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32891247" />
       <window_info anchor="bottom" id="REST Client" order="15" weight="0.52519894" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.17989418" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.17989418" />
       <window_info anchor="right" id="Mongo Explorer" order="5" />
     </layout>
   </component>
@@ -663,7 +665,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新查询models，记录查询信息" />
     <MESSAGE value="优化" />
     <MESSAGE value="“圈子”序列化" />
     <MESSAGE value="“圈子”model" />
@@ -688,7 +689,8 @@
     <MESSAGE value="修复点赞的问题" />
     <MESSAGE value=".." />
     <MESSAGE value="优化登录判断逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化登录判断逻辑" />
+    <MESSAGE value="优化新闻页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化新闻页面" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/circle/__init__.py">
@@ -859,16 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="e#1#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/news.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-301">
@@ -895,10 +887,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/dean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="480">
+          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#1#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
