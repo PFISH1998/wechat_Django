@@ -10,6 +10,8 @@ import json
 
 
 # Create your views here.
+from tools.one import One
+
 
 def index(request):
 
@@ -18,6 +20,14 @@ def index(request):
     # pwd = data.get('sid')
     # print(sid, pwd)
     return HttpResponse('Django test Welcome')
+
+
+def home(request):
+    o = One()
+    daily = o.get_page()
+    return HttpResponse(json.dumps({
+        "data": daily
+    }))
 
 
 def register(request):
