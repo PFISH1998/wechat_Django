@@ -28,8 +28,6 @@ class PostSerializers(serializers.ModelSerializer):
 
 
 
-
-
     # def update(self, instance, validated_data):
     #     instance.content = validated_data.get()
 

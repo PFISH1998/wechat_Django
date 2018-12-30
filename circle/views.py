@@ -21,10 +21,16 @@ def get_open_id(request):
         data = json.loads(str(r.text))
         print(data)
         openid = data.get("openid")
-        CircleUser.objects.get(uid=openid)
+        user = CircleUser.objects.get(uid=openid)
+        u_type = user.type
         CircleUser.objects.update(last_login=now())
+        print(u_type)
+        r_data = {
+            'openid': data.get("openid"),
+            'type': u_type
+        }
         return HttpResponse(json.dumps({
-            'data': data.get("openid"),
+            'data': r_data,
             'code': 201
         }))
     except CircleUser.DoesNotExist:
@@ -90,8 +96,12 @@ class PostDetail(APIView):
 
     def delete(self, request, pk):
         post = self.get_object(pk)
-        post.display = False
-        post.save()
+        uid = request.data.get('uid')
+        user = CircleUser.objects.get(uid=uid)
+        if post.uid_id is uid or user.type == 'admin':
+            post.display = False
+            post.save()
+            return Response(status=status.HTTP_202_ACCEPTED)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
@@ -99,7 +109,6 @@ class CircleUserList(APIView):
 
     def post(self, request):
         print(request.data)
-        print(request.data['nick_name'])
         circle_user = CircleUser.objects.filter(nick_name=request.data['nick_name'])
         print(circle_user)
         if circle_user.exists():
@@ -114,8 +123,10 @@ class CircleUserList(APIView):
         return Response(status=status.HTTP_403_FORBIDDEN, data='data not valid')
 
     def get(self, request):
-        user = CircleUser.objects.all()
-        serializer = CircleUserSerializer(user, many=True)
+        user = request.GET['user']
+        print(user)
+        post = Post.objects.filter(display=True, uid_id=user)
+        serializer = PostSerializers(post, many=True, context={"uid": user})
         return Response(serializer.data)
 
 
