@@ -54,14 +54,9 @@ class Comments(models.Model):  # 评论表
     from_user = models.ForeignKey('CircleUser', on_delete=models.DO_NOTHING, null=True)  # 评论人
     is_view = models.BooleanField(default=False)  # 是否已经提醒
 
-
-
-
     # display = models.ForeignKey(to='Post', to_field='display')
     # replay_user = models.OneToOneField()
     # view = models
-
-
 
 class Like(models.Model):  # 点赞表
     post = models.ForeignKey('Post', on_delete=models.DO_NOTHING)  # 点赞对象的 ID

@@ -70,9 +70,7 @@ def get_time_table_result(sid, pwd):
 
 def grade_process(grade, term):
     for year in term:
-        # print(year)
         for i in year['List']:
-            # print(i['SemesterId'])
             grade_list = []
             for g in grade:
                 # print("g     ", g['SemesterID'], i['SemesterId'])

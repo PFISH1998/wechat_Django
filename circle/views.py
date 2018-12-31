@@ -1,3 +1,5 @@
+from rest_framework.pagination import PageNumberPagination
+
 from circle.serializers import PostSerializers, CircleUserSerializer, CommentsSerializer, LikeSerializer
 from circle.models import Post, CircleUser, Comments, Like
 from django.http import HttpResponse, JsonResponse
@@ -53,7 +55,9 @@ class PostList(APIView):
     def get(self, request):
         uid = request.GET['uid']
         post = Post.objects.filter(display=True)
-        serializer = PostSerializers(post, many=True, context={"uid": uid})
+        pg = PageNumberPagination()
+        page_roles = pg.paginate_queryset(queryset=post, request=request, view=self)
+        serializer = PostSerializers(page_roles, many=True, context={"uid": uid})
         return Response(serializer.data)
 
     def post(self, request):

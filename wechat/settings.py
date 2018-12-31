@@ -26,6 +26,9 @@ apps = '4f0f142d577093bb473a94e947d203ef'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+REST_FRAMEWORK = {
+    "PAGE_SIZE": 20
+}
 
 ALLOWED_HOSTS = ['140.143.17.162', 'localhost ', 'wx.tomwang.club', '127.0.0.1']
 
