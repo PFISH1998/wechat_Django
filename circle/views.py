@@ -99,14 +99,18 @@ class PostDetail(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk):
-        post = self.get_object(pk)
-        uid = request.data.get('uid')
-        user = CircleUser.objects.get(uid=uid)
-        if post.uid_id is uid or user.type == 'admin':
-            post.display = False
-            post.save()
-            return Response(status=status.HTTP_202_ACCEPTED)
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        try:
+            uid = request.data.get('uid')
+            post = Post.objects.get(pk=pk)
+            user = CircleUser.objects.get(uid=uid)
+            if user.type == 'admin' or post.uid_id == uid:
+                post.display = False
+                post.save()
+                return Response(status=status.HTTP_202_ACCEPTED)
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Exception as e:
+            print(e)
+            return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 class CircleUserList(APIView):
