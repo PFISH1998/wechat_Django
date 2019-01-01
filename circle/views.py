@@ -113,7 +113,7 @@ class CircleUserList(APIView):
 
     def post(self, request):
         print(request.data)
-        circle_user = CircleUser.objects.filter(nick_name=request.data['nick_name'])
+        circle_user = CircleUser.objects.filter(uid=request.data['uid'])
         print(circle_user)
         if circle_user.exists():
             # print("not")

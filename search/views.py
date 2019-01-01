@@ -3,6 +3,8 @@ import time
 
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from tools.biying import request_api
 from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process
 from django.contrib.auth.models import User
 import requests
@@ -23,10 +25,9 @@ def index(request):
 
 
 def home(request):
-    o = One()
-    daily = o.get_page()
+    bing = request_api()
     return HttpResponse(json.dumps({
-        "data": daily
+        "data": bing
     }))
 
 
