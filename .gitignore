@@ -1,2 +1,4 @@
-wechat\settings.py
-.idea\
+db.sqlite3
+wechat/settings.py
+.idea/
+*.pyc
