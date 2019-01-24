@@ -4,7 +4,7 @@ import time
 
 
 def request_api():
-    api_url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
+    api_url = 'https://www2.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
     r = requests.get(api_url)
     image = json.loads(r.text)
     daily = structure_data(image)
@@ -20,7 +20,3 @@ def structure_data(image):
     daily['day'] = int(str(d[1]))
     daily['year'] = d[2]
     return daily
-
-
-
-request_api()

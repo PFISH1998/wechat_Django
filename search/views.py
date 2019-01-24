@@ -21,7 +21,7 @@ def index(request):
     # sid = data.get('sid')
     # pwd = data.get('sid')
     # print(sid, pwd)
-    return HttpResponse('Django test Welcome')
+    return HttpResponse('Django  Welcome')
 
 
 def home(request):
