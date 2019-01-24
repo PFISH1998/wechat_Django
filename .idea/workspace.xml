@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b128a-9494-4785-a5db-22dbcf5ec1f3" name="Default Changelist" comment="">
-
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/eaccd173-cb21-43c4-a165-957b78e18304.xml" beforeDir="false" />
-
       <change beforePath="$PROJECT_DIR$/tools/biying.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/biying.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -78,13 +76,11 @@
           <entry key="circle_post" value="25" />
           <entry key="django_admin_log" value="3" />
           <entry key="gitignore" value="3" />
-
           <entry key="http" value="2" />
           <entry key="json" value="1" />
           <entry key="log" value="1" />
           <entry key="news_news" value="2" />
           <entry key="py" value="207" />
-
           <entry key="sql" value="1" />
           <entry key="sqlite_master" value="2" />
         </counts>
@@ -95,7 +91,6 @@
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="Python" value="196" />
-
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -106,7 +101,6 @@
           <entry key="dummy" value="2" />
           <entry key="gitignore" value="44" />
           <entry key="py" value="15034" />
-
           <entry key="sql" value="22" />
           <entry key="txt" value="372" />
         </counts>
@@ -115,7 +109,6 @@
         <counts>
           <entry key="PLAIN_TEXT" value="430" />
           <entry key="Python" value="15513" />
-
           <entry key="SQL" value="22" />
           <entry key="Scratch" value="558" />
         </counts>
@@ -135,7 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
               <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-
             </state>
           </provider>
         </entry>
@@ -154,7 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
               <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-
             </state>
           </provider>
         </entry>
@@ -1118,7 +1109,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-
         </state>
       </provider>
     </entry>
@@ -1161,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-
         </state>
       </provider>
     </entry>
