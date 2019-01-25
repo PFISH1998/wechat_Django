@@ -25,7 +25,7 @@ def get_open_id(request):
         openid = data.get("openid")
         user = CircleUser.objects.get(uid=openid)
         u_type = user.type
-        CircleUser.objects.update(last_login=now())
+        user.objects.update(last_login=now())
         print(u_type)
         r_data = {
             'openid': data.get("openid"),

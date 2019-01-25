@@ -52,9 +52,6 @@ def get_grade_result(sid, pwd):
     data = etree.HTML(grade_page)
     semester_year = data.xpath('//input[@id="hfSemesterFramework"]/@value')[0]
     grade_info = data.xpath('//input[@id="hfAverageMarkFromClass"]/@value')[0]
-    # print(json.loads(str(grade_info)))
-    # print(json.loads(grade_info))
-    # print(json.loads(semester_year))
     return json.loads(grade_info), json.loads(semester_year)
 
 
@@ -73,7 +70,6 @@ def grade_process(grade, term):
         for i in year['List']:
             grade_list = []
             for g in grade:
-                # print("g     ", g['SemesterID'], i['SemesterId'])
                 if int(g['SemesterID']) == int(i['SemesterId']):
                     g.update({'Credit': g['Credit'][:3]})
                     grade_list.append(g)
@@ -128,7 +124,6 @@ def sort_list(week_day):
             other_list.append(same_list[0])
 
     new_list = sorted(other_list, key=lambda e: e.__getitem__('course_index'))
-    # print(i for i in new_list)
     return new_list
 
 
@@ -139,16 +134,11 @@ def time_table_process(data):
     # 循环一周
     # 判断是否为当天，是的话加入一天的序列
     for t in week:
-        # print(t)
         week_day = []
         for course in data['Data']:
-            # print(course)
             if course[t]:
-                # print(course)
-                # print('---------------')
                 week_day.append(course)
         for c in data['Data']:
             del c[t]
         data_list.append(sort_list(week_day))
-    # print(data_list)
     return data_list

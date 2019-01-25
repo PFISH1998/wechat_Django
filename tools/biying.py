@@ -20,7 +20,3 @@ def structure_data(image):
     daily['day'] = int(str(d[1]))
     daily['year'] = d[2]
     return daily
-
-
-
-request_api()
