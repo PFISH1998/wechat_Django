@@ -7,7 +7,7 @@ import re
 
 def get_url_from_index_page(url):
     page_url = 'http://www.cidp.edu.cn/index/{}.htm'.format(url)
-    print(page_url)
+    # print(page_url)
     r = requests.get(page_url)
     r.encoding = 'utf-8'
     page = re.compile(r'.*?<div class="list_main_right">(.*?)</div>.*?', re.S).findall(r.text)  # 主内容区域
@@ -21,13 +21,13 @@ def get_url_from_index_page(url):
 
     page = dict()
     page.update({'news_list': news_list, 'next_page': next_page})
-    print(page)
+    # print(page)
     return page
 
 
 def get_index_content_from_url(news_url):  # 获取内容
     if news_url.startswith('http://211.71.233.21'):  # 旧版网页
-        print("old")
+        # print("old")
         return
     real_url = re.findall(r'.*?/(\d+)/(\d+).htm', news_url)[0]
     content_url = 'http://www.cidp.edu.cn/info/{}/{}.htm'\
@@ -71,5 +71,5 @@ def get_total_content(url):
         text = ' '.join([i for i in content.strings])
         page_list.append({'content': text})
         # print(content.string)
-    print(page_list)
+    # print(page_list)
     return page_list[:-4], img_list

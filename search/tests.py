@@ -1,12 +1,13 @@
 from django.test import TestCase
-import requests
-import json
+from search.views import login
+from django.http import HttpRequest
 # Create your tests here.
 
-r = requests.get('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
-image = json.loads(r.text)
-print(image)
-print(image['images'][0])
-print(image['images'][0]['copyright'])
-print(image['images'][0]['url'])
-print(image['images'][0]['enddate'])
+
+class LoginTest(TestCase):
+    request = HttpRequest()
+    request.method = 'POST'
+    request['sid'] = '12345'
+    request['pwd'] = 'qwer'
+    response = login(request)
+    print(response)

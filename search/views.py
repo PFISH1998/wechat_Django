@@ -3,6 +3,7 @@ import time
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.utils.timezone import now
 
 from tools.biying import request_api
 from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process
@@ -25,13 +26,17 @@ def index(request):
 
 
 def home(request):
-    bing = request_api()
-    return HttpResponse(json.dumps({
-        "data": bing
-    }))
+    try:
+        bing = request_api()
+        return HttpResponse(json.dumps({
+            "data": bing
+        }))
+    except:
+        return HttpResponse(status=400)
 
 
 def register(request):
+    now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     try:
         # body = json.loads(request.body.decode('utf-8'))
         body = request.POST
@@ -39,10 +44,9 @@ def register(request):
         pwd = body.get('password')
         print(sid, pwd)
         try:
-
             user = User.objects.filter(username=sid)
             if user.exists():
-                result = user.filter(username=sid).update(password=pwd)
+                result = user.filter(username=sid).update(password=pwd, last_login=now)
             else:
                 result = user.create(username=sid, password=pwd)
                 # return HttpResponse('nouser')
@@ -76,7 +80,7 @@ def grade(request):
             try:
                 user = User.objects.filter(username=sid)
                 if user.exists():
-                    user.filter(username=sid).update(password=pwd)
+                    user.update(password=pwd, last_login=now())
                 else:
                     user.create(username=sid, password=pwd)
                     # return HttpResponse('nouser')
@@ -139,7 +143,7 @@ def time_table(request):
             try:
                 user = User.objects.filter(username=sid)
                 if user.exists():
-                    user.filter(username=sid).update(password=pwd)
+                    user.update(password=pwd, last_login=now())
                 else:
                     user.create(username=sid, password=pwd)
                     # return HttpResponse('nouser')
@@ -190,3 +194,4 @@ def time_table(request):
     finally:
         gc.collect()
         print('完成')
+
