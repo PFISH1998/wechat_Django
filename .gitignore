@@ -2,5 +2,3 @@ db.sqlite3
 wechat/settings.py
 .idea/
 *.pyc
-.idea/
-.idea/dataSources/eaccd173-cb21-43c4-a165-957b78e18304.xml
