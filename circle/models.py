@@ -5,9 +5,8 @@ from django.db import models
 class Post(models.Model):  # 发布圈子
     uid = models.ForeignKey('CircleUser', on_delete=models.DO_NOTHING)  # 发布的用户昵称
     content = models.TextField()  # 内容
-    # picture = models.FileField(blank=True, null=True) # 发布图片
+    # picture = models.TextField(null=True, default='')  # 发布图片
     pub_time = models.DateTimeField(auto_now_add=True)  # 发布时间
-
     type = models.CharField(choices=
                             (('normal', '普通'), ('top', '置顶'), ('note', '通知')),
                             default='normal', max_length=30)   # 类型

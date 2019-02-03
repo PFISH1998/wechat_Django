@@ -68,6 +68,7 @@ class PostList(APIView):
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+
 class PostDetail(APIView):
     @staticmethod
     def get_object(pk):
