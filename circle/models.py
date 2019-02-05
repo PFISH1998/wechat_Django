@@ -52,7 +52,7 @@ class Comments(models.Model):  # 评论表
     comment_time = models.DateTimeField(auto_now_add=True)  # 评论时间
     from_user = models.ForeignKey('CircleUser', on_delete=models.DO_NOTHING, null=True)  # 评论人
     is_view = models.BooleanField(default=False)  # 是否已经提醒
-
+    display = models.BooleanField(default=True)
     # display = models.ForeignKey(to='Post', to_field='display')
     # replay_user = models.OneToOneField()
     # view = models

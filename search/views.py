@@ -36,7 +36,7 @@ def home(request):
 
 
 def register(request):
-    now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    now = time.strftime('%Y-%m-%d %H:%M:%S')
     try:
         # body = json.loads(request.body.decode('utf-8'))
         body = request.POST
@@ -46,7 +46,7 @@ def register(request):
         try:
             user = User.objects.filter(username=sid)
             if user.exists():
-                result = user.filter(username=sid).update(password=pwd, last_login=now)
+                result = user.update(password=pwd, last_login=now)
             else:
                 result = user.create(username=sid, password=pwd)
                 # return HttpResponse('nouser')
@@ -66,7 +66,6 @@ def register(request):
         }))
     finally:
         gc.collect()
-
 
 def grade(request):
     try:
