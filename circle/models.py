@@ -49,7 +49,7 @@ class CircleUser(models.Model):  # 圈子用户表
 class Comments(models.Model):  # 评论表
     circle = models.ForeignKey('Post', on_delete=models.DO_NOTHING)  # 被评论的内容
     comment_content = models.TextField()  # 评论内容
-    comment_time = models.DateTimeField(auto_now_add=True)  # 评论时间
+    pub_time = models.DateTimeField(auto_now_add=True)  # 评论时间
     from_user = models.ForeignKey('CircleUser', on_delete=models.DO_NOTHING, null=True)  # 评论人
     is_view = models.BooleanField(default=False)  # 是否已经提醒
     display = models.BooleanField(default=True)
