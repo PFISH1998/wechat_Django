@@ -90,11 +90,11 @@ class PostDetail(APIView):
 
     def get(self, request, pk):
         try:
+            uid = request.GET['uid']
             post = self.get_object(pk)
         except Post.DoesNotExist:
             return HttpResponse(status=status.HTTP_404_NOT_FOUND)
-
-        serializer = PostSerializers(post)
+        serializer = PostSerializers(post, context={"uid": uid})
         return Response(serializer.data)
 
     def put(self, request, pk):
