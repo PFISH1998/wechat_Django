@@ -15,7 +15,9 @@ urlpatterns = [
 
     path('like/<int:pk>/', views.LikeList.as_view()),
 
-    path('uid/', views.get_open_id)
+    path('uid/', views.get_open_id),
+
+    path('pic/', views.file_upload)
 
 ]
 

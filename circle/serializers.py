@@ -12,7 +12,7 @@ class PostSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'post_user', 'head_pic', 'uid', 'content', 'pictures',
+        fields = ('id', 'post_user', 'head_pic', 'uid', 'content',
                   'pub_time', 'type', 'comments_count', 'like_count',
                   'is_like', 'dis_like_count')
 
@@ -44,11 +44,14 @@ class CircleUserSerializer(serializers.ModelSerializer):
 
 
 class CommentsSerializer(serializers.ModelSerializer):
-    comment_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True, required=False)
+    post_user = serializers.CharField(source='from_user.nick_name', required=False)
+    head_pic = serializers.CharField(source='from_user.head_pic', required=False)
+    pub_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True, required=False)
 
     class Meta:
         model = Comments
-        fields = ('id', 'comment_content', 'circle', 'comment_time', 'from_user')
+        fields = ('id', 'comment_content', 'circle', 'pub_time', 'from_user', 'post_user',
+                  'head_pic')
 
     def create(self, validated_data):
         return Comments.objects.create(**validated_data)

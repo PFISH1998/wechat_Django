@@ -49,6 +49,17 @@ def get_open_id(request):
         }))
 
 
+def file_upload(request):
+    try:
+        img_file = request.FILES.get('img_file', None)
+        print(img_file)
+        return HttpResponse(status=200)
+    except Exception as e:
+        print(e)
+        return HttpResponse(status=400)
+
+
+
 # 发布圈子功能
 class PostList(APIView):
 
@@ -66,7 +77,6 @@ class PostList(APIView):
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 class PostDetail(APIView):
