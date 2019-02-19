@@ -21,12 +21,10 @@ def get_open_id(request):
             .format(appid, apps, body.get('code'))
         r = requests.get(url)
         data = json.loads(str(r.text))
-        print(data)
         openid = data.get("openid")
         user = CircleUser.objects.get(uid=openid)
         u_type = user.type
         user.objects.update(last_login=now())
-        print(u_type)
         r_data = {
             'openid': data.get("openid"),
             'type': u_type
@@ -52,7 +50,6 @@ def get_open_id(request):
 def file_upload(request):
     try:
         img_file = request.FILES.get('img_file', None)
-        print(img_file)
         return HttpResponse(status=200)
     except Exception as e:
         print(e)
@@ -65,7 +62,7 @@ class PostList(APIView):
 
     def get(self, request):
         uid = request.GET['uid']
-        post = Post.objects.filter(display=True)
+        post = Post.objects.filter(display=True, type='top')
         pg = PageNumberPagination()
         page_roles = pg.paginate_queryset(queryset=post, request=request, view=self)
         serializer = PostSerializers(page_roles, many=True, context={"uid": uid})
@@ -127,23 +124,18 @@ class PostDetail(APIView):
 class CircleUserList(APIView):
 
     def post(self, request):
-        print(request.data)
         circle_user = CircleUser.objects.filter(uid=request.data['uid'])
-        print(circle_user)
         if circle_user.exists():
-            # print("not")
             return Response(status=status.HTTP_304_NOT_MODIFIED, data='user exists')
 
         serializer = CircleUserSerializer(data=request.data)
         if serializer.is_valid():
-            print('yes')
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_403_FORBIDDEN, data='data not valid')
 
     def get(self, request):
         user = request.GET['user']
-        print(user)
         post = Post.objects.filter(display=True, uid_id=user)
         serializer = PostSerializers(post, many=True, context={"uid": user})
         return Response(serializer.data)
@@ -230,7 +222,6 @@ class CommentNoteList(APIView):
 class LikeList(APIView):
 
     def post(self, request, pk):
-        print(request.data["uid"])
         try:
             post = Post.objects.get(display=True, pk=pk)
             like = Like.objects.get(post=pk, uid=request.data['uid'])  #有记录则更新  改成删除
