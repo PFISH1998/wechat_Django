@@ -22,7 +22,7 @@ table_url = 'http://jw.cidp.edu.cn/Teacher/TimeTableHandler.ashx?r=0.61426579249
 time_table_data = {
     'action': 'getTeacherTimeTable',
     'isShowStudent': '1',
-    'semId': '58',
+    'semId': '59',
     'testTeacherTimeTablePublishStatus': '1',
     'isPublic': ''
         }
