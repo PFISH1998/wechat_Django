@@ -4,10 +4,10 @@ from django.http import HttpRequest
 # Create your tests here.
 
 
-# class LoginTest(TestCase):
-#     request = HttpRequest()
-#     request.method = 'POST'
-#     request['sid'] = '12345'
-#     request['pwd'] = 'qwer'
-#     response = login(request)
-#     print(response)
+def cidp(sid):
+    if len(sid) == 8 and sid.startwith("180"):
+        return True
+    elif sid[2] == '5':
+        return True
+    else:
+        return False
