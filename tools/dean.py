@@ -6,7 +6,7 @@ import time
 import html
 from lxml import etree
 
-
+# http://jwauth.cidp.edu.cn/Login.aspx
 login_url = 'http://jwauth.cidp.edu.cn/Login.ashx?name={}&pwd={}&action=loginJsonP'
 jw_index_url = 'http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx'
 my_jw_url = 'http://jwauth.cidp.edu.cn/NoMasterJumpPage.aspx?URL=JWGL'
@@ -142,3 +142,14 @@ def time_table_process(data):
             del c[t]
         data_list.append(sort_list(week_day))
     return data_list
+
+
+def cidp(sid):
+    if len(sid) == 8 and sid.startswith("180"):
+        return True
+    elif sid[2] == '5':
+        return True
+    else:
+        return False
+
+
