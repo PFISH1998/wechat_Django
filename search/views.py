@@ -1,12 +1,12 @@
 import gc
 import time
 
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils.timezone import now
 
 from tools.biying import request_api
-from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process
+from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process, cidp
+from tools.hnsxy import ShangXueYuan
 from django.contrib.auth.models import User
 import requests
 import json
@@ -48,7 +48,7 @@ def register(request):
             if user.exists():
                 result = user.update(password=pwd, last_login=now)
             else:
-                result = user.create(username=sid, password=pwd)
+                result = user.create(username=sid, password=pwd, last_login=now())
                 # return HttpResponse('nouser')
         except Exception as e:
             print('database', e)
@@ -67,21 +67,27 @@ def register(request):
     finally:
         gc.collect()
 
+
 def grade(request):
     try:
         body = json.loads(request.body.decode('utf-8'))
         sid = body.get('sid')
         pwd = body.get('pwd')
+        print(sid)
         try:
-            grade, term = get_grade_result(sid, pwd)
-            term_data = grade_process(grade, term)
-            print("返回")
+            if not cidp(sid):
+                s = ShangXueYuan(sid, pwd)
+                term_data = s.get_grade_sxy()
+            else:
+                grade, term = get_grade_result(sid, pwd)
+                term_data = grade_process(grade, term)
+            print("查询成功返回")
             try:
                 user = User.objects.filter(username=sid)
                 if user.exists():
                     user.update(password=pwd, last_login=now())
                 else:
-                    user.create(username=sid, password=pwd)
+                    user.create(username=sid, password=pwd, last_login=now())
                     # return HttpResponse('nouser')
             except Exception as e:
                 print('database', e)
@@ -118,9 +124,12 @@ def grade(request):
 
     except Exception as e:
         print("其他问题", e)
+        info = '可能是教务处出错了，正在解决'
+        if e == 'login404':
+                info= '密码出错或者其他原因'
         return HttpResponse(json.dumps({
-                'code': 2222,
-                'info': '奇怪的问题，正在解决'
+                'code': 1013,
+                'info': info
             }))
     finally:
         gc.collect()
@@ -136,9 +145,14 @@ def time_table(request):
         body = json.loads(request.body.decode('utf-8'))
         sid = body.get('sid')
         pwd = body.get('pwd')
+        print(sid)
         try:
-            data = get_time_table_result(sid, pwd)
-            result = time_table_process(data)
+            if cidp(sid):
+                data = get_time_table_result(sid, pwd)
+                result = time_table_process(data)
+            else:
+                s = ShangXueYuan(sid, pwd)
+                result = s.get_table_sxy()
             try:
                 user = User.objects.filter(username=sid)
                 if user.exists():
@@ -149,6 +163,7 @@ def time_table(request):
             except Exception as e:
                 print('database', e)
             finally:
+                print('查询成功返回')
                 return HttpResponse(
                     json.dumps({
                         'data': result,
@@ -164,7 +179,7 @@ def time_table(request):
 
         except Exception as e:
             print("1", e)
-            if str(e) == 'PasswordError':
+            if str(e) == 'PasswordError' or 'login404':
                 print('密码错误', e)
                 return HttpResponse(json.dumps({
                     'code': 300,
@@ -187,8 +202,8 @@ def time_table(request):
     except Exception as e:
         print("其他问题", e)
         return HttpResponse(json.dumps({
-            'code': 2222,
-            'info': '奇怪的问题，正在解决'
+            'code': 3025,
+            'info': '可能是教务处出问题了...'
         }))
     finally:
         gc.collect()
