@@ -62,7 +62,8 @@ class PostList(APIView):
 
     def get(self, request):
         uid = request.GET['uid']
-        post = Post.objects.filter(display=True, type='top')
+        # post = Post.objects.filter(display=True, type='top')
+        post = Post.objects.filter(display=True)
         pg = PageNumberPagination()
         page_roles = pg.paginate_queryset(queryset=post, request=request, view=self)
         serializer = PostSerializers(page_roles, many=True, context={"uid": uid})
