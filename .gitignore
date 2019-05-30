@@ -4,3 +4,5 @@ wechat/settings.py
 *.pyc
 tools/grade.html
 tools/table.html
+*.pyc
+*.pyc
