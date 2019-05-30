@@ -1,6 +1,9 @@
 import json
 import random
-
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import requests
 import time
 import html
@@ -33,16 +36,46 @@ def time_test(fun):
     print(time.time() - t)
 
 
-def open_page(sid, pwd):
-    s = requests.Session()
-    t = s.get(login_url.format(sid, pwd))
-    t.encoding = 'utf-8'
-    msg = json.loads(t.text[1:-1])['Message']
-    if msg == '密码不正确':
+# 模拟登陆页面，返回cookie
+def log_in_ehall(sid, pwd):
+    driver = webdriver.PhantomJS('/var/django/wechat/tools/phantomjs')
+    driver.get("http://authserver.cidp.edu.cn/authserver/login?service=http%3a%2f%2fjw.cidp.edu.cn%2fLoginHandler.ashx")
+    driver.find_element_by_id('username').send_keys(sid)
+    driver.find_element_by_id('password').send_keys(pwd)
+    driver.find_element_by_xpath('//*[@id="casLoginForm"]//button').click()
+    try:
+        WebDriverWait(driver,3).until(
+            EC.title_is('教务管理系统')
+        )
+    except:
         raise Exception('PasswordError')
-    s.get(jw_index_url)
-    s.get(my_jw_url)
+    else:
+        cookies = driver.get_cookies()
+        driver.quit()
+        return cookies
+
+# 构造带session的请求
+def set_cookie(cookies):
+    s = requests.Session()
+    for cookie in cookies:
+        s.cookies.set(cookie['name'], cookie['value'])
     return s
+
+
+# def open_page(sid, pwd):
+#     s = requests.Session()
+#     t = s.get(login_url.format(sid, pwd))
+#     t.encoding = 'utf-8'
+#     msg = json.loads(t.text[1:-1])['Message']
+#     if msg == '密码不正确':
+#         raise Exception('PasswordError')
+#     s.get(jw_index_url)
+#     s.get(my_jw_url)
+#     return s
+
+def open_page(sid, pwd):
+    cookies = log_in_ehall(sid, pwd)
+    return set_cookie(cookies)
 
 
 # @time_test
