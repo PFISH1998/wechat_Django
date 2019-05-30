@@ -106,7 +106,7 @@ def grade(request):
                 print('密码错误', e)
                 return HttpResponse(json.dumps({
                         'code': 300,
-                        'info': '密码错误'
+                        'info': '密码错误，请输入办事大厅密码'
                     }))
 
             elif str(e) == 'IdError':
@@ -183,7 +183,7 @@ def time_table(request):
                 print('密码错误', e)
                 return HttpResponse(json.dumps({
                     'code': 300,
-                    'info': '密码错误'
+                    'info': '密码错误，请输入办事大厅密码'
                 }))
 
             elif str(e) == 'IdError':
