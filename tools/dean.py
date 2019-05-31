@@ -1,15 +1,13 @@
 import json
 import random
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import requests
 import time
-import html
 from lxml import etree
 
-# http://jwauth.cidp.edu.cn/Login.aspx
+
 login_url = 'http://jwauth.cidp.edu.cn/Login.ashx?name={}&pwd={}&action=loginJsonP'
 jw_index_url = 'http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx'
 my_jw_url = 'http://jwauth.cidp.edu.cn/NoMasterJumpPage.aspx?URL=JWGL'
@@ -17,9 +15,7 @@ my_jw_url = 'http://jwauth.cidp.edu.cn/NoMasterJumpPage.aspx?URL=JWGL'
 grade_url = 'http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx'
 table_url = 'http://jw.cidp.edu.cn/Teacher/TimeTableHandler.ashx?r=0.6142657924934334'
 
-
-# url_3 = 'http://jw.cidp.edu.cn/Teacher/TimeTable.aspx?display=10001101100&showc=0&showsem=1&semid=58'
-# s.get('http://jw.cidp.edu.cn/Student/CourseTimetable/MyCourseTimeTable.aspx')
+ehall_url = "http://authserver.cidp.edu.cn/authserver/login?service=http%3a%2f%2fjw.cidp.edu.cn%2fLoginHandler.ashx"
 
 
 time_table_data = {
@@ -39,7 +35,8 @@ def time_test(fun):
 # 模拟登陆页面，返回cookie
 def log_in_ehall(sid, pwd):
     driver = webdriver.PhantomJS('/var/django/wechat/tools/phantomjs')
-    driver.get("http://authserver.cidp.edu.cn/authserver/login?service=http%3a%2f%2fjw.cidp.edu.cn%2fLoginHandler.ashx")
+    # driver = webdriver.PhantomJS('/Users/perry/Documents/GitHub/wechat_Django/tools/phantomjsmac')
+    driver.get(ehall_url)
     driver.find_element_by_id('username').send_keys(sid)
     driver.find_element_by_id('password').send_keys(pwd)
     driver.find_element_by_xpath('//*[@id="casLoginForm"]//button').click()
@@ -48,11 +45,13 @@ def log_in_ehall(sid, pwd):
             EC.title_is('教务管理系统')
         )
     except:
+        driver.quit()
         raise Exception('PasswordError')
     else:
         cookies = driver.get_cookies()
         driver.quit()
         return cookies
+
 
 # 构造带session的请求
 def set_cookie(cookies):
@@ -111,27 +110,14 @@ def grade_process(grade, term):
 
 
 def sort_list(week_day):
+    time_spend_dict = {22: 200, 48: 400}
+    course_start_dict = {96: 0, 122: 1, 168: 2, 194: 3, 228: 4}
     for i in week_day:
-        if i['TimeSlotEnd'] - i['TimeSlotStart'] == 22:
-            time_spend = 200
-        elif i['TimeSlotEnd'] - i['TimeSlotStart'] == 48:
-            time_spend = 400
-        else:
-            time_spend = 200
+        time_value = i['TimeSlotEnd'] - i['TimeSlotStart']
+        time_spend = time_spend_dict.get(time_value, 400)
         i.update({'time_spend': time_spend})
 
-        if i['TimeSlotStart'] == 96:
-            course_index = 0
-        elif i['TimeSlotStart'] == 122:
-            course_index = 1
-        elif i['TimeSlotStart'] == 168:
-            course_index = 2
-        elif i['TimeSlotStart'] == 194:
-            course_index = 3
-        elif i['TimeSlotStart'] == 228:
-            course_index = 4
-        else:
-            course_index = 0
+        course_index = course_start_dict.get(i['TimeSlotStart'], 0)
         i.update({'course_index': course_index})
         i.update({'color': random.randint(0, 12)})
 
