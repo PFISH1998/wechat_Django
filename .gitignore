@@ -1,8 +1,6 @@
 db.sqlite3
-wechat/settings.py
 .idea/
-*.pyc
 tools/grade.html
 tools/table.html
 *.pyc
-*.pyc
+wechat/setting.ini
