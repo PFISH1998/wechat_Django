@@ -29,7 +29,6 @@ def open_jw(cookies):
     s = requests.Session()
     p = s.get('http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx', cookies=jar)
     p.encoding = 'utf-8'
-    print(p.text)
     # r = s.get('http://ehall.cidp.edu.cn/jsonp/sendRecUseApp.json?appId=5399199055014616&_=1559186487927')
     # r = s.get('http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx')
     # r.encoding = 'utf-8'

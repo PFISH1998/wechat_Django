@@ -1,15 +1,19 @@
+# -*- coding: utf-8 -*-
+
+import json
+
+from django.http import HttpResponse, JsonResponse
+from django.utils.timezone import now
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework import status
+import requests
+
 
 from circle.serializers import PostSerializers, CircleUserSerializer, CommentsSerializer, LikeSerializer
 from circle.models import Post, CircleUser, Comments, Like
-from django.http import HttpResponse, JsonResponse
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from django.utils.timezone import now
-from rest_framework import status
 from wechat.settings import appid, apps
-import requests
-import json
 
 
 # 登录功能，未完善， 将继续封装成类
@@ -54,7 +58,6 @@ def file_upload(request):
     except Exception as e:
         print(e)
         return HttpResponse(status=400)
-
 
 
 # 发布圈子功能
@@ -213,8 +216,8 @@ class CommentsList(APIView):
 
 
 class CommentNoteList(APIView):
-
-    def get(self, request, pk):  # 根据用户查找是否有未提醒的评论， pk 为用户ID
+    # 根据用户查找是否有未提醒的评论， pk 为用户ID
+    def get(self, request, pk):
         note = Comments.objects.filter(is_view=False, circle__uid=pk)
         serializer = CommentsSerializer(note, many=True)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -225,7 +228,8 @@ class LikeList(APIView):
     def post(self, request, pk):
         try:
             post = Post.objects.get(display=True, pk=pk)
-            like = Like.objects.get(post=pk, uid=request.data['uid'])  #有记录则更新  改成删除
+            # 有记录则更新  改成删除
+            like = Like.objects.get(post=pk, uid=request.data['uid'])
             Like.delete(like)
             post.change_like(request.data['status'])
             return HttpResponse(status=status.HTTP_201_CREATED)
@@ -241,14 +245,6 @@ class LikeList(APIView):
 
         except Exception as e:
             print(e)
-
-
-
-
-
-
-        # return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
-
 
     def get(self, request, pk):
         try:

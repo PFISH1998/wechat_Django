@@ -1,8 +1,10 @@
-# encoding:utf-8
+# -*- coding: utf-8 -*-
+
 import random
+
+from bs4 import BeautifulSoup
 import execjs
 import requests
-from bs4 import BeautifulSoup
 
 
 class ShangXueYuan:
@@ -54,7 +56,6 @@ class ShangXueYuan:
         if login_page.status_code == 200:
             return self.session
         if login_page.status_code == 404:
-            print(login_page.status_code)
             e = 'login404'
             raise Exception(e)
 

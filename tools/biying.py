@@ -1,6 +1,9 @@
-import requests
+# -*- coding: utf-8 -*-
+
 import json
 import time
+
+import requests
 
 
 def request_api():
@@ -20,11 +23,3 @@ def structure_data(image):
     daily['day'] = int(str(d[1]))
     daily['year'] = d[2]
     return daily
-
-# class Biying:
-#     def __init__(self):
-#         self.base_url = "https://cn.bing.com"
-#         self.api = "/HPImageArchive.aspx?format=js&idx=0&n=1"
-#
-#
-#     def

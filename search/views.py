@@ -1,19 +1,16 @@
+# -*- coding: utf-8 -*-
+
 import gc
-import time
+import json
+from requests import exceptions
 
 from django.http import HttpResponse
 from django.utils.timezone import now
-
-from tools.biying import request_api
-from tools.dean import get_grade_result, grade_process, get_time_table_result, time_table_process, cidp
-from tools.hnsxy import ShangXueYuan
 from django.contrib.auth.models import User
-import requests
-import json
 
-
-# Create your views here.
-from tools.one import One
+from tools.dean import *
+from tools.hnsxy import ShangXueYuan
+from tools.biying import request_api
 
 
 def index(request):
@@ -36,7 +33,6 @@ def home(request):
 
 
 def register(request):
-    now = time.strftime('%Y-%m-%d %H:%M:%S')
     try:
         # body = json.loads(request.body.decode('utf-8'))
         body = request.POST
@@ -46,10 +42,9 @@ def register(request):
         try:
             user = User.objects.filter(username=sid)
             if user.exists():
-                result = user.update(password=pwd, last_login=now)
+                result = user.update(password=pwd, last_login=now())
             else:
                 result = user.create(username=sid, password=pwd, last_login=now())
-                # return HttpResponse('nouser')
         except Exception as e:
             print('database', e)
         finally:
@@ -97,11 +92,10 @@ def grade(request):
                     'code': 200,
                 }))
 
-        except requests.exceptions.ConnectionError as e:
+        except exceptions.ConnectionError as e:
             print('网络连接出错', e)
 
         except Exception as e:
-            print("1", e)
             if str(e) == 'PasswordError':
                 print('密码错误', e)
                 return HttpResponse(json.dumps({
@@ -119,14 +113,14 @@ def grade(request):
                 print(e)
                 return HttpResponse(json.dumps({
                     'code': 1001,
-                    'info': '获取成绩失败，请稍后重试'+ e
+                    'info': '获取成绩失败，请稍后重试'
                 }))
 
     except Exception as e:
         print("其他问题", e)
         info = '可能是教务处出错了，正在解决'
         if e == 'login404':
-                info= '密码出错或者其他原因'
+            info = '密码出错或者其他原因'
         return HttpResponse(json.dumps({
                 'code': 1013,
                 'info': info
@@ -196,7 +190,7 @@ def time_table(request):
                 print(e)
                 return HttpResponse(json.dumps({
                     'code': 1001,
-                    'info': '获取课表失败，请稍后重试' + e
+                    'info': '获取课表失败，请稍后重试'
                 }))
 
     except Exception as e:
