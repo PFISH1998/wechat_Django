@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
-
-import json
-
 from django.http import HttpResponse
-
 from tools.searchNews import GetNews
 from tools.news import get_url_from_index_page, get_total_content
+import json
 # Create your views here.
 
 g = GetNews()
@@ -23,7 +19,12 @@ def content(request):
         'news_content': news_content,
         'pic_list': pic_list
     }))
-
+    # except Exception as e:
+    # print(e)
+    # return HttpResponse(status=404)
+    # finally:
+    # print('完成')
+        # gc.collect()
 
 
 def news_list(request):
@@ -40,7 +41,27 @@ def news_list(request):
     return HttpResponse(json.dumps({
         'news_list': data
     }))
-
+    # except AttributeError:
+    #     print('AttributeError')
+    #     return HttpResponse(
+    #         json.dumps({
+    #         'page_num': page_num,
+    #     }))
+    # except ValueError:
+    #     print('ValueError')
+    #     return HttpResponse(
+    #         json.dumps({
+    #         'page_num': page_num,
+    #         }))
+    # except BaseException as e:
+    #     print(e)
+    #     return HttpResponse(
+    #         json.dumps({
+    #             'page_num': page_num,
+    #         }))
+    # finally:
+    #     print('完成')
+        # gc.collect()
 
 
 
