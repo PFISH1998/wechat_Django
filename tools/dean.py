@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
-
-from lxml import etree
-import random
 import json
-import time
-
+import random
+from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium import webdriver
 import requests
+import time
+from lxml import etree
 
 
 login_url = 'http://jwauth.cidp.edu.cn/Login.ashx?name={}&pwd={}&action=loginJsonP'
@@ -27,7 +24,7 @@ time_table_data = {
     'semId': '59',
     'testTeacherTimeTablePublishStatus': '1',
     'isPublic': ''
-    }
+        }
 
 
 def time_test(fun):
@@ -44,19 +41,19 @@ def log_in_ehall(sid, pwd):
     driver.find_element_by_id('password').send_keys(pwd)
     driver.find_element_by_xpath('//*[@id="casLoginForm"]//button').click()
     try:
-        WebDriverWait(driver, 3).until(
+        WebDriverWait(driver,3).until(
             EC.title_is('教务管理系统')
         )
-    except Exception as e:
+    except:
+        driver.quit()
         raise Exception('PasswordError')
     else:
         cookies = driver.get_cookies()
-        return cookies
-    finally:
         driver.quit()
+        return cookies
 
 
-# 构造带 cookie 的请求
+# 构造带session的请求
 def set_cookie(cookies):
     s = requests.Session()
     for cookie in cookies:
@@ -124,8 +121,8 @@ def sort_list(week_day):
         i.update({'course_index': course_index})
         i.update({'color': random.randint(0, 12)})
 
-        del i['DCId'], i['DCPId'], i['TimeSlotStart'], i['TimeSlotEnd'], i['Capacity']
-        del i['DCSN'], i['Count'], i['WeekInterval'], i['WeekStart'], i['WeekEnd'],
+        del i['DCId'], i['DCPId'], i['TimeSlotStart'], i['TimeSlotEnd'], i['DCSN']
+        del i['WeekInterval'], i['WeekStart'], i['WeekEnd'], i['Count'], i['Capacity']
         del i['LUCode'], i['ClassCodes'], i['TeacherRollNumber']
 
     other_list = []

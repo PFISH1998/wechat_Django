@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from rest_framework import serializers
 from circle.models import CircleUser, Post, Comments, Like
 
