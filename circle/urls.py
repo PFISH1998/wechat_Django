@@ -1,4 +1,5 @@
-from rest_framework.urlpatterns import format_suffix_patterns
+# -*- coding: utf-8 -*-
+
 from . import views
 from django.urls import path
 
