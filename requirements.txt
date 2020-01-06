@@ -30,7 +30,7 @@ pyOpenSSL==18.0.0
 PySocks==1.6.8
 pytz==2018.5
 qiniu==7.2.2
-requests==2.19.1
+requests==2.20.0
 selenium==3.14.0
 six==1.12.0
 soupsieve==1.9.1
