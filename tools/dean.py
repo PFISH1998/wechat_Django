@@ -1,30 +1,36 @@
 import json
+import logging
+import os
 import random
+import time
+
+
+from lxml import etree
+import requests
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import requests
-import time
-from lxml import etree
 
+from wechat.settings import BASE_DIR
+
+logger = logging.getLogger(__name__)
 
 login_url = 'http://jwauth.cidp.edu.cn/Login.ashx?name={}&pwd={}&action=loginJsonP'
-jw_index_url = 'http://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx'
-my_jw_url = 'http://jwauth.cidp.edu.cn/NoMasterJumpPage.aspx?URL=JWGL'
-
-grade_url = 'http://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx'
-table_url = 'http://jw.cidp.edu.cn/Teacher/TimeTableHandler.ashx?r=0.6142657924934334'
+jw_index_url = 'https://jwauth.cidp.edu.cn/Student/MyAcademicCareer.aspx'
+my_jw_url = 'https://jwauth.cidp.edu.cn/NoMasterJumpPage.aspx?URL=JWGL'
+grade_url = 'https://jw.cidp.edu.cn/Teacher/MarkManagement/StudentAverageMarkSearchFZ.aspx'
+table_url = 'https://jw.cidp.edu.cn/Teacher/TimeTableHandler.ashx?r=0.6142657924934334'
 
 ehall_url = "http://authserver.cidp.edu.cn/authserver/login?service=http%3a%2f%2fjw.cidp.edu.cn%2fLoginHandler.ashx"
-
 
 time_table_data = {
     'action': 'getTeacherTimeTable',
     'isShowStudent': '1',
-    'semId': '59',
+    'semId': '61',
     'testTeacherTimeTablePublishStatus': '1',
     'isPublic': ''
-        }
+    }
 
 
 def time_test(fun):
@@ -34,23 +40,29 @@ def time_test(fun):
 
 # 模拟登陆页面，返回cookie
 def log_in_ehall(sid, pwd):
-    driver = webdriver.PhantomJS('/var/django/wechat/tools/phantomjs')
-    # driver = webdriver.PhantomJS('/Users/perry/Documents/GitHub/wechat_Django/tools/phantomjsmac')
+    service_args = []
+    service_args.append('--load-images=no')
+    # driver = webdriver.PhantomJS('/var/django/wechat/tools/phantomjs')
+    # '/Users/perry/Documents/GitHub/wechat_Django/tools/phantomjsmac'
+    phantom_path = os.path.join(BASE_DIR, 'tools', 'phantomjs')
+    driver = webdriver.PhantomJS(phantom_path, service_args=service_args)
     driver.get(ehall_url)
     driver.find_element_by_id('username').send_keys(sid)
     driver.find_element_by_id('password').send_keys(pwd)
     driver.find_element_by_xpath('//*[@id="casLoginForm"]//button').click()
     try:
-        WebDriverWait(driver,3).until(
+        
+        WebDriverWait(driver, 3).until(
             EC.title_is('教务管理系统')
         )
-    except:
-        driver.quit()
+    except Exception as e:
+        logger.warning(e)
         raise Exception('PasswordError')
     else:
         cookies = driver.get_cookies()
-        driver.quit()
         return cookies
+    finally:
+        driver.quit()
 
 
 # 构造带session的请求
@@ -80,14 +92,14 @@ def open_page(sid, pwd):
 # @time_test
 def get_grade_result(sid, pwd):
     s = open_page(sid, pwd)
-    grade_page = s.get(grade_url).text
+    response = s.get(grade_url)
+    grade_page = response.text
     data = etree.HTML(grade_page)
     semester_year = data.xpath('//input[@id="hfSemesterFramework"]/@value')[0]
     grade_info = data.xpath('//input[@id="hfAverageMarkFromClass"]/@value')[0]
     return json.loads(grade_info), json.loads(semester_year)
 
 
-#
 # @time_test
 def get_time_table_result(sid, pwd):
     s = open_page(sid, pwd)
@@ -130,7 +142,6 @@ def sort_list(week_day):
         same_list = []
         for item in week_day:
             if item['course_index'] == index:
-                # print(len(same_list))
                 same_list.append(item)
             if len(same_list) > 1:
                 same_list[0].update({'FullName2': same_list[1]['FullName']})
@@ -149,7 +160,6 @@ def sort_list(week_day):
 def time_table_process(data):
     data_list = []
     week = ['OnMonday', 'OnTuesday', 'OnWednesday', 'OnThursday', 'OnFriday', 'OnSaturday', 'OnSunday']
-    # print(course)
     # 循环一周
     # 判断是否为当天，是的话加入一天的序列
     for t in week:
@@ -164,9 +174,7 @@ def time_table_process(data):
 
 
 def cidp(sid):
-    if len(sid) == 8 and sid.startswith("180"):
-        return True
-    elif sid[2] == '5':
+    if len(sid) == 8 or sid[2] == '5':
         return True
     else:
         return False
